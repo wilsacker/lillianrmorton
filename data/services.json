@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "evals-home-preview",
+      "title": "Psychoeducational Evaluations",
+      "description": "A psychoeducational evaluation is a comprehensive assessment that looks at several areas of development. This includes academic achievement (skills in reading, writing, and math), cognitive and psychological processing (how different parts of the brain influence learning), and social-emotional and behavioral functioning (how a child behaves and interacts in settings like home and school)."
+    },
+    {
+      "id": 2,
+      "name": "consultations-home-preview",
+      "title": "Consultations",
+      "description": "I guide families through the Individualized Education Program (IEP) and Section 504 Plan processes, helping parents understand their rights and advocate effectively for their child’s educational needs. My aim is to empower you with the knowledge and confidence to support your child’s success. In addition, I can also attend IEP meetings with you to offer support and guidance. Together, we can create opportunities for your child to grow and thrive."
+    },
+    {
+        "id": 3,
+        "name": "counseling-home-preview",
+        "title": "Counseling",
+        "description": "If you’re feeling overwhelmed by challenges at work or school, I’m here to help you navigate them. I believe that through meaningful conversation, we can bring clarity, process emotions, and uncover solutions. Together, we will overcome obstacles and create a clear path forward.<br><br>My counseling approach is centered on empathy, collaboration, and a deep commitment to your well-being. I strive to provide a safe, supportive environment where you feel truly heard, valued, and understood. Trust is the foundation of growth, and I’m here to support and guide you throughout your journey."
+    }
+  ]

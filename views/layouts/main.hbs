@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Lillian R. Morton">
+    <meta property="og:description" content="Home of Lillian R. Morton Psychological Services">
+    <meta property="og:image" content="/images/lrm-logo-image.png">
+    <meta property="og:url" content="https://lillianrmorton.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/lrm-logo-image.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/lrm-logo-image.png" sizes="16x16">
+</head>
+<body>
+
+    {{> header}}  <!-- This will include the header on every page -->
+
+    <main>
+        {{{body}}}  <!-- This is where each page's unique content will go -->
+    </main>
+
+    {{> footer}}  <!-- This will include the footer on every page -->
+
+</body>
+</html>
