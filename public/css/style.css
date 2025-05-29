@@ -1,57 +1,57 @@
 /* === RESET === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* === TYPOGRAPHY === */
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background-color: #fff;
-  }
-  
-  /* === SPACING SYSTEM === */
-  :root {
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 4rem;
-  }
-  
-  /* === BASE STRUCTURE === */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === TYPOGRAPHY === */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+}
+
+/* === SPACING SYSTEM === */
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+/* === BASE STRUCTURE === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
-  
+
   .section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
   }
-  
+
   .section-title {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
   }
-  
-  /* === MEDIA QUERIES === */
-  @media (max-width: 768px) {
-    .container {
-      padding: var(--spacing-md);
-    }
-  
-    .section {
-      padding: var(--spacing-lg) 0;
-    }
-  
-    .section-title {
-      font-size: 1.5rem;
-    }
-  }
+}
 
 /* === HEADER AND NAVIGATION === */
 .header {
@@ -181,35 +181,58 @@
 }
 
 /* HOME SECTIONS */
-.hero {}
-.hero-title {}
-.hero-subtext {}
-.hero-image {}
+.hero {
+}
+.hero-title {
+}
+.hero-subtext {
+}
+.hero-image {
+}
 
-.feature-block {}
-.feature-title {}
-.feature-description {}
+.feature-block {
+}
+.feature-title {
+}
+.feature-description {
+}
 
 /* ABOUT PAGE */
-.about-section {}
-.about-text {}
-.about-photo {}
+.about-section {
+}
+.about-text {
+}
+.about-photo {
+}
 
 /* CONTACT PAGE */
-.contact-section {}
-.contact-form {}
-.contact-form-label {}
-.contact-form-input {}
-.contact-form-button {}
+.contact-section {
+}
+.contact-form {
+}
+.contact-form-label {
+}
+.contact-form-input {
+}
+.contact-form-button {
+}
 
 /* CONSULTATIONS PAGE */
-.consult-section {}
-.consult-card {}
-.consult-title {}
-.consult-description {}
+.consult-section {
+}
+.consult-card {
+}
+.consult-title {
+}
+.consult-description {
+}
 
 /* FOOTER */
-.footer {}
-.footer-links {}
-.footer-socials {}
-.footer-logo {}
+.footer {
+}
+.footer-links {
+}
+.footer-socials {
+}
+.footer-logo {
+}
