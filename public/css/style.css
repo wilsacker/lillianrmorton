@@ -47,9 +47,113 @@ body {
    =============================== */
 
 /* Header layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9; /* Matches wireframe bg */
+  padding: 1.25rem 2rem;
+}
+
+.burger-menu {
+}
+
 /* Logo styling */
+#logo-title-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.logo h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 /* Navigation links */
-/* Mobile nav */
+.nav-menu ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-menu li a,
+.dropdown-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #666;
+  text-decoration: none;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #0c2b2b; /* Darker color for active */
+}
+
+/* Dropdown menu (for "Services") */
+.dropdown {
+    position: relative;
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: var(--border-radius);
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Request appointment area */
+.nav-appointment-button .appointment-button {
+  background-color: #444;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ===============================
+    Media Queries (Mobile): Nav+ Burger Menu
+   =============================== */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-appointment-button {
+    display: none;
+  }
+}
 
 /* ===============================
     Partials: Footer
@@ -73,136 +177,136 @@ body {
 
 /* Hero section */
 .hero {
-    /* container styles */
+  /* container styles */
 }
 .hero-text {
-    /* text content block */
+  /* text content block */
 }
 .hero-text h1 {
-    /* headline */
+  /* headline */
 }
 .hero-text p {
-    /* subtext */
+  /* subtext */
 }
 .hero-text a {
-    /* CTA button */
+  /* CTA button */
 }
 .hero-image img {
-    /* hero image */
+  /* hero image */
 }
 
 /* Unanswered Questions Section */
 .questions {
-    /* section wrapper */
+  /* section wrapper */
 }
 .questions h2 {
-    /* heading */
+  /* heading */
 }
 .questions p {
-    /* intro/closing paragraph */
+  /* intro/closing paragraph */
 }
 .question-cards {
-    /* container for the cards */
+  /* container for the cards */
 }
 .question-cards .card {
-    /* individual card styling */
+  /* individual card styling */
 }
 .question-cards .card p {
-    /* card text */
+  /* card text */
 }
 
 /* Clear Answers Section */
 .answers {
-    /* section wrapper */
+  /* section wrapper */
 }
 .answers-image img {
-    /* image block */
+  /* image block */
 }
 .answers-text {
-    /* text container */
+  /* text container */
 }
 .answers-text h2 {
-    /* headline */
+  /* headline */
 }
 .answers-text p {
-    /* subheadline */
+  /* subheadline */
 }
 .answers-text ul {
-    /* checklist */
+  /* checklist */
 }
 .answers-text ul li {
-    /* list items */
+  /* list items */
 }
 .answers-text a {
-    /* CTA button */
+  /* CTA button */
 }
 
 /* Meet Lillian Section */
 .meet-lillian {
-    /* section wrapper */
+  /* section wrapper */
 }
 .lillian-section {
-    /* flex container for bio and image */
+  /* flex container for bio and image */
 }
 .bio-text h3 {
-    /* subheadline */
+  /* subheadline */
 }
 .bio-text p {
-    /* paragraphs */
+  /* paragraphs */
 }
 .bio-image img {
-    /* headshot image */
+  /* headshot image */
 }
 
 /* 3 Steps Section */
 .three-steps {
-    /* section wrapper */
+  /* section wrapper */
 }
 .three-steps h2 {
-    /* section heading */
+  /* section heading */
 }
 .steps {
-    /* container for step cards */
+  /* container for step cards */
 }
 .step {
-    /* individual step card */
+  /* individual step card */
 }
 .step h3 {
-    /* step number + heading */
+  /* step number + heading */
 }
 .step p {
-    /* step description */
+  /* step description */
 }
 .three-steps a {
-    /* bottom CTA button */
+  /* bottom CTA button */
 }
 
 /* Services Grid Section */
 .services-grid {
-    /* section wrapper */
+  /* section wrapper */
 }
 .services-grid h2 {
-    /* heading */
+  /* heading */
 }
 .service-buttons {
-    /* container for links */
+  /* container for links */
 }
 .service-buttons a {
-    /* button link */
+  /* button link */
 }
 .service-buttons a span {
-    /* subtext span inside buttons */
+  /* subtext span inside buttons */
 }
 
 /* Closing Message Section */
 .closing-message {
-    /* section wrapper */
+  /* section wrapper */
 }
 .closing-message h2 {
-    /* heading */
+  /* heading */
 }
 .closing-message p {
-    /* paragraph text */
+  /* paragraph text */
 }
 
 /* ===============================
