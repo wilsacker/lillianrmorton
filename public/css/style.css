@@ -276,18 +276,64 @@ body {
 /* Meet Lillian Section */
 .meet-lillian {
     /* section wrapper */
+    background-color: #e1e1e1; /* soft gray background */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.meet-lillian h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+.meet-lillian p {
+    font-size: 1rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
 }
 .lillian-section {
     /* flex container for bio and image */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+.bio-text {
+    flex: 1 1 500px;
+    max-width: 600px;
 }
 .bio-text h3 {
     /* subheadline */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
 }
 .bio-text p {
     /* paragraphs */
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.bio-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bio-image img {
     /* headshot image */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* 3 Steps Section */
