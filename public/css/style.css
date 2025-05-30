@@ -113,18 +113,15 @@ body {
     text-decoration: none;
     transition: background-color var(--transition);
 }
-
 .hero-text a:hover {
     background-color: #ccc;
 }
-
 .hero-image {
     flex: 1 1 400px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .hero-image img {
     /* hero image */
     max-width: 80%; /* !change depending on image size! */
@@ -136,7 +133,7 @@ body {
 /* Unanswered Questions Section */
 .questions {
     /* section wrapper */
-    background-color: #e1e1e1; /* matches the light gray background */
+    background-color: #e1e1e1; /* match the light gray background */
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -170,29 +167,26 @@ body {
     padding: 2rem 1.5rem;
     border-radius: 20px;
     width: 100%;
-    max-width: 300px; /* max width for cards, could potentially be 320 */
+    max-width: 320px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .question-cards .card::before {
-    content: '᯽'; /* simple icon substitute; swap out for inline SVG or img as needed */
+    content: '᯽'; /* https://emojicombos.com/leaf */
     color: #666;
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #999;
 }
-
 .question-cards .card p {
     /* card text */
     font-size: 1rem;
     color: var(--color-text);
     line-height: 1.5;
 }
-
 .questions > p:last-of-type {
     font-size: 1rem;
     margin-top: 2rem;
@@ -202,27 +196,81 @@ body {
 /* Clear Answers Section */
 .answers {
     /* section wrapper */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .answers-image img {
     /* image block */
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answers-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
 }
 .answers-text {
     /* text container */
+    flex: 1 1 500px;
+    max-width: 600px;
 }
 .answers-text h2 {
     /* headline */
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--color-text);
 }
 .answers-text p {
     /* subheadline */
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
 }
 .answers-text ul {
     /* checklist */
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
 }
 .answers-text ul li {
     /* list items */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+.answers-text ul li::before {
+    content: '✔';
+    display: inline-block;
+    font-size: 1.25rem;
+    color: #999;
 }
 .answers-text a {
     /* CTA button */
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    background-color: #555;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color var(--transition);
+}
+.answers-text a:hover {
+    background-color: #444;
 }
 
 /* Meet Lillian Section */
