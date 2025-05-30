@@ -74,21 +74,63 @@ body {
 /* Hero section */
 .hero {
     /* container styles */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+    flex-wrap: wrap; /* fallback for smaller viewports */
 }
 .hero-text {
     /* text content block */
+    flex: 1 1 500px;
+    max-width: 600px;
 }
 .hero-text h1 {
     /* headline */
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
 }
 .hero-text p {
     /* subtext */
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
 }
 .hero-text a {
     /* CTA button */
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    background-color: #ddd;
+    border-radius: 999px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background-color var(--transition);
 }
+
+.hero-text a:hover {
+    background-color: #ccc;
+}
+
+.hero-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-image img {
     /* hero image */
+    max-width: 80%; /* !change depending on image size! */
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
 }
 
 /* Unanswered Questions Section */
