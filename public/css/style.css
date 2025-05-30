@@ -339,41 +339,134 @@ body {
 /* 3 Steps Section */
 .three-steps {
     /* section wrapper */
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;   
 }
 .three-steps h2 {
     /* section heading */
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 3rem;
 }
 .steps {
     /* container for step cards */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
 }
 .step {
     /* individual step card */
+    background-color: #555;
+    color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+    max-width: 300px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .step h3 {
     /* step number + heading */
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.step h3::before {
+    content: attr(data-step);
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    background-color: white;
+    color: #333;
+    font-weight: 700;
+    border-radius: 50%;
+    line-height: 48px;
+    font-size: 1.25rem;
+    border: 2px solid #373737;
 }
 .step p {
     /* step description */
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1.5;
 }
 .three-steps a {
     /* bottom CTA button */
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: #555;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color var(--transition);
+}
+.three-steps a:hover {
+    background-color: #444;
 }
 
 /* Services Grid Section */
 .services-grid {
     /* section wrapper */
+    background-color: #dcdcdc; /* light gray background */
+    padding: 4rem 2rem;
+    text-align: center;
 }
 .services-grid h2 {
     /* heading */
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 3rem;
 }
 .service-buttons {
     /* container for links */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .service-buttons a {
     /* button link */
+    background-color: #444;
+    color: white;
+    border-radius: 24px;
+    padding: 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 600;
+    transition: background-color var(--transition);
+    position: relative;
+}
+.service-buttons a:hover {
+    background-color: #333;
 }
 .service-buttons a span {
     /* subtext span inside buttons */
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #e0e0e0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.service-buttons a span::after {
+    content: '↓';
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
 /* Closing Message Section */
