@@ -136,21 +136,67 @@ body {
 /* Unanswered Questions Section */
 .questions {
     /* section wrapper */
+    background-color: #e1e1e1; /* matches the light gray background */
+    padding: 4rem 2rem;
+    text-align: center;
 }
 .questions h2 {
     /* heading */
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
 }
 .questions p {
     /* intro/closing paragraph */
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .question-cards {
     /* container for the cards */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
 }
 .question-cards .card {
     /* individual card styling */
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px; /* max width for cards, could potentially be 320 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.question-cards .card::before {
+    content: '᯽'; /* simple icon substitute; swap out for inline SVG or img as needed */
+    color: #666;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #999;
+}
+
 .question-cards .card p {
     /* card text */
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.questions > p:last-of-type {
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--color-text);
 }
 
 /* Clear Answers Section */
