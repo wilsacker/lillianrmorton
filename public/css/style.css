@@ -77,7 +77,7 @@ header {
 }
 
 /* Navigation links */
-.nav-menu ul {
+.nav-menu > ul {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -99,7 +99,7 @@ header {
 /* Dropdown menu (for "Services") */
 .dropdown {
     position: relative;
-  }
+}
 
 .dropdown-content {
   display: none;
@@ -111,10 +111,30 @@ header {
   padding: 0.5rem 0;
   border-radius: var(--border-radius);
   z-index: 100;
+  min-width: 200px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content{
   display: block;
+}
+
+/* Style dropdown links */
+.dropdown-content li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content li a:hover {
+  background: #f0f0f0;
+  color: var(--color-accent);
 }
 
 /* Request appointment area */
