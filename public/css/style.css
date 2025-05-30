@@ -277,7 +277,6 @@ header {
 
 /* Hero section */
 .hero {
-<<<<<<< HEAD
     /* container styles */
     display: flex;
     align-items: center;
@@ -333,29 +332,10 @@ header {
     height: auto;
     border-radius: var(--border-radius);
     object-fit: cover;
-=======
-  /* container styles */
-}
-.hero-text {
-  /* text content block */
-}
-.hero-text h1 {
-  /* headline */
-}
-.hero-text p {
-  /* subtext */
-}
-.hero-text a {
-  /* CTA button */
-}
-.hero-image img {
-  /* hero image */
->>>>>>> develop
 }
 
 /* Unanswered Questions Section */
 .questions {
-<<<<<<< HEAD
     /* section wrapper */
     background-color: #e1e1e1; /* match the light gray background */
     padding: 4rem 2rem;
@@ -415,29 +395,10 @@ header {
     font-size: 1rem;
     margin-top: 2rem;
     color: var(--color-text);
-=======
-  /* section wrapper */
-}
-.questions h2 {
-  /* heading */
-}
-.questions p {
-  /* intro/closing paragraph */
-}
-.question-cards {
-  /* container for the cards */
-}
-.question-cards .card {
-  /* individual card styling */
-}
-.question-cards .card p {
-  /* card text */
->>>>>>> develop
 }
 
 /* Clear Answers Section */
 .answers {
-<<<<<<< HEAD
     /* section wrapper */
     display: flex;
     align-items: center;
@@ -513,35 +474,10 @@ header {
 }
 .answers-text a:hover {
     background-color: #444;
-=======
-  /* section wrapper */
-}
-.answers-image img {
-  /* image block */
-}
-.answers-text {
-  /* text container */
-}
-.answers-text h2 {
-  /* headline */
-}
-.answers-text p {
-  /* subheadline */
-}
-.answers-text ul {
-  /* checklist */
-}
-.answers-text ul li {
-  /* list items */
-}
-.answers-text a {
-  /* CTA button */
->>>>>>> develop
 }
 
 /* Meet Lillian Section */
 .meet-lillian {
-<<<<<<< HEAD
     /* section wrapper */
     background-color: #e1e1e1; /* soft gray background */
     padding: 4rem 2rem;
@@ -601,26 +537,10 @@ header {
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-=======
-  /* section wrapper */
-}
-.lillian-section {
-  /* flex container for bio and image */
-}
-.bio-text h3 {
-  /* subheadline */
-}
-.bio-text p {
-  /* paragraphs */
-}
-.bio-image img {
-  /* headshot image */
->>>>>>> develop
 }
 
 /* 3 Steps Section */
 .three-steps {
-<<<<<<< HEAD
     /* section wrapper */
     padding: 4rem 2rem;
     text-align: center;
@@ -694,32 +614,10 @@ header {
 }
 .three-steps a:hover {
     background-color: #444;
-=======
-  /* section wrapper */
-}
-.three-steps h2 {
-  /* section heading */
-}
-.steps {
-  /* container for step cards */
-}
-.step {
-  /* individual step card */
-}
-.step h3 {
-  /* step number + heading */
-}
-.step p {
-  /* step description */
-}
-.three-steps a {
-  /* bottom CTA button */
->>>>>>> develop
 }
 
 /* Services Grid Section */
 .services-grid {
-<<<<<<< HEAD
     /* section wrapper */
     background-color: #dcdcdc; /* light gray background */
     padding: 4rem 2rem;
@@ -772,26 +670,10 @@ header {
     content: '↓';
     font-size: 1.25rem;
     line-height: 1;
-=======
-  /* section wrapper */
-}
-.services-grid h2 {
-  /* heading */
-}
-.service-buttons {
-  /* container for links */
-}
-.service-buttons a {
-  /* button link */
-}
-.service-buttons a span {
-  /* subtext span inside buttons */
->>>>>>> develop
 }
 
 /* Closing Message Section */
 .closing-message {
-<<<<<<< HEAD
     /* section wrapper */
     background-color: #fff;
     padding: 5rem 2rem;
@@ -815,15 +697,6 @@ header {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-=======
-  /* section wrapper */
-}
-.closing-message h2 {
-  /* heading */
-}
-.closing-message p {
-  /* paragraph text */
->>>>>>> develop
 }
 
 /* ===============================
