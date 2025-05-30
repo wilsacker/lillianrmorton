@@ -1,0 +1,131 @@
+/* ===============================
+    Root Styles & Base Elements
+   =============================== */
+
+/* Variables, resets, typography, body styles, etc. */
+
+/* Root variables */
+:root {
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+  --color-text: #333;
+  --color-bg: #f9f9f9;
+  --color-accent: #007bff;
+  --color-muted: #666;
+  --border-radius: 6px;
+  --transition: 0.3s ease;
+}
+
+/* Base resets and box sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and html defaults */
+html {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===============================
+    Partials: Header
+   =============================== */
+
+/* Header layout */
+/* Logo styling */
+/* Navigation links */
+/* Mobile nav */
+
+/* ===============================
+    Partials: Footer
+   =============================== */
+
+/* Footer layout */
+/* Contact info */
+/* Social links */
+
+/* ===============================
+    Layouts: Main
+   =============================== */
+
+/* Main container layout */
+/* Section spacing */
+/* Shared layout utilities */
+
+/* ===============================
+    Pages: Home
+   =============================== */
+
+/* Hero section */
+/* Intro/about teaser */
+/* Service highlights */
+/* Testimonials */
+/* Call to action */
+
+/* ===============================
+    Pages: About
+   =============================== */
+
+/* Bio and profile layout */
+/* Mission/vision section */
+
+/* ===============================
+    Pages: Consultations
+   =============================== */
+
+/* Consultation service cards */
+/* Info sections */
+/* Booking prompt */
+
+/* ===============================
+    Pages: Contact
+   =============================== */
+
+/* Contact form styles */
+/* Address + contact details */
+/* Map or directions */
+
+/* ===============================
+    Pages: Counseling
+   =============================== */
+
+/* Service listings */
+/* Descriptions or FAQs */
+
+/* ===============================
+    Pages: Evals
+   =============================== */
+
+/* Evaluation types */
+/* Process explanation */
+/* Insurance/payment info */
+
+/* ===============================
+    Pages: 404
+   =============================== */
+
+/* Error message styling */
+/* Back-to-home link */
+
+/* ===============================
+    Responsive & Utility Classes
+   =============================== */
+
+/* Breakpoints */
+/* Flex/grid helpers */
+/* Visibility or margin helpers */
