@@ -72,10 +72,138 @@ body {
    =============================== */
 
 /* Hero section */
-/* Intro/about teaser */
-/* Service highlights */
-/* Testimonials */
-/* Call to action */
+.hero {
+    /* container styles */
+}
+.hero-text {
+    /* text content block */
+}
+.hero-text h1 {
+    /* headline */
+}
+.hero-text p {
+    /* subtext */
+}
+.hero-text a {
+    /* CTA button */
+}
+.hero-image img {
+    /* hero image */
+}
+
+/* Unanswered Questions Section */
+.questions {
+    /* section wrapper */
+}
+.questions h2 {
+    /* heading */
+}
+.questions p {
+    /* intro/closing paragraph */
+}
+.question-cards {
+    /* container for the cards */
+}
+.question-cards .card {
+    /* individual card styling */
+}
+.question-cards .card p {
+    /* card text */
+}
+
+/* Clear Answers Section */
+.answers {
+    /* section wrapper */
+}
+.answers-image img {
+    /* image block */
+}
+.answers-text {
+    /* text container */
+}
+.answers-text h2 {
+    /* headline */
+}
+.answers-text p {
+    /* subheadline */
+}
+.answers-text ul {
+    /* checklist */
+}
+.answers-text ul li {
+    /* list items */
+}
+.answers-text a {
+    /* CTA button */
+}
+
+/* Meet Lillian Section */
+.meet-lillian {
+    /* section wrapper */
+}
+.lillian-section {
+    /* flex container for bio and image */
+}
+.bio-text h3 {
+    /* subheadline */
+}
+.bio-text p {
+    /* paragraphs */
+}
+.bio-image img {
+    /* headshot image */
+}
+
+/* 3 Steps Section */
+.three-steps {
+    /* section wrapper */
+}
+.three-steps h2 {
+    /* section heading */
+}
+.steps {
+    /* container for step cards */
+}
+.step {
+    /* individual step card */
+}
+.step h3 {
+    /* step number + heading */
+}
+.step p {
+    /* step description */
+}
+.three-steps a {
+    /* bottom CTA button */
+}
+
+/* Services Grid Section */
+.services-grid {
+    /* section wrapper */
+}
+.services-grid h2 {
+    /* heading */
+}
+.service-buttons {
+    /* container for links */
+}
+.service-buttons a {
+    /* button link */
+}
+.service-buttons a span {
+    /* subtext span inside buttons */
+}
+
+/* Closing Message Section */
+.closing-message {
+    /* section wrapper */
+}
+.closing-message h2 {
+    /* heading */
+}
+.closing-message p {
+    /* paragraph text */
+}
 
 /* ===============================
     Pages: About
