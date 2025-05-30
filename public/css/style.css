@@ -199,14 +199,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* allows wrapping on small screens */
     gap: 3rem;
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-.answers-image img {
-    /* image block */
+.answers-image {
     flex: 1 1 400px;
     display: flex;
     justify-content: center;
@@ -430,7 +429,7 @@ body {
 .service-buttons {
     /* container for links */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -472,12 +471,28 @@ body {
 /* Closing Message Section */
 .closing-message {
     /* section wrapper */
+    background-color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .closing-message h2 {
     /* heading */
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
 }
 .closing-message p {
     /* paragraph text */
+    font-size: 1.125rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ===============================
