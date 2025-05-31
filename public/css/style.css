@@ -703,51 +703,822 @@ header {
     Pages: About
    =============================== */
 
-/* Bio and profile layout */
-/* Mission/vision section */
+/* About Intro Section */
+.about-intro {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.about-intro p {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-top {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.about-image {
+    flex: 1 1 300px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1 1 500px;
+}
+
+/* Message Block Section */
+.about-message {
+    background-color: #e1e1e1;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.about-message p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+}
+
+.about-message p::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+/* Unique Approach Section */
+.unique-approach {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.unique-approach h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 3rem;
+}
+
+.approach-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.approach-cards .card {
+    background-color: #444;
+    color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+    max-width: 300px;
+    flex: 1 1 260px;
+    text-align: left;
+}
+
+.approach-cards .card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.approach-cards .card h3::before {
+    content: ''; /* Replace with icon if needed */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.25rem;
+}
+
+.approach-cards .card p {
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1.5;
+}
+
+.unique-approach > p {
+    font-size: 1rem;
+    color: var(--color-text);
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+}
+
+.unique-approach a {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: #555;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color var(--transition);
+}
+
+.unique-approach a:hover {
+    background-color: #333;
+}
 
 /* ===============================
     Pages: Consultations
    =============================== */
 
-/* Consultation service cards */
-/* Info sections */
-/* Booking prompt */
+/* Hero Section */
+.consultation-hero {
+    padding: 7rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.consultation-hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.consultation-hero p {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+}
+
+/* Questions Section */
+.consultation-questions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    background-color: #e1e1e1;
+    align-items: flex-start;
+}
+
+.consultation-questions .text {
+    flex: 1 1 500px;
+}
+
+.consultation-questions .text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.consultation-questions .text p {
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.consultation-questions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.consultation-questions li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.consultation-questions li::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.consultation-questions .image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.consultation-questions .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+}
+
+/* What Is a Consultation */
+.what-is-consultation {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.what-is-consultation h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.what-is-consultation p {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.what-is-consultation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.what-is-consultation li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.what-is-consultation li::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Why Choose a Consultation */
+.why-consultation {
+    background-color: #e1e1e1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.why-consultation h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.why-consultation p {
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+.consultation-benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.consultation-benefits .image {
+    flex: 1 1 350px;
+}
+
+.consultation-benefits .image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: var(--border-radius);
+}
+
+.consultation-benefits .benefits-list {
+    flex: 1 1 400px;
+}
+
+.consultation-benefits .benefits-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.consultation-benefits .benefits-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.consultation-benefits .benefits-list li::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Call to Action */
+.consultation-cta {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.consultation-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.consultation-cta p {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.consultation-cta a {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: #444;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color var(--transition);
+}
+
+.consultation-cta a:hover {
+    background-color: #333;
+}
 
 /* ===============================
     Pages: Contact
    =============================== */
 
-/* Contact form styles */
-/* Address + contact details */
-/* Map or directions */
+/* Contact Intro Section */
+.contact-intro {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.contact-intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.contact-intro p {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.contact-intro a {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: #444;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color var(--transition);
+}
+
+.contact-intro a:hover {
+    background-color: #333;
+}
+
+/* Appointment Availability Section */
+.availability {
+    background-color: #dcdcdc;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.availability h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.availability-columns {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.availability-columns h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.availability-columns p {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+}
+
+.contact-info p {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
 
 /* ===============================
     Pages: Counseling
    =============================== */
 
-/* Service listings */
-/* Descriptions or FAQs */
+/* === Counseling Hero === */
+.counseling-hero {
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    background: white;
+  }
+  
+  .counseling-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .counseling-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  
+  .counseling-questions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #e6e6e6; /* light gray background */
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+  
+  .counseling-questions .text {
+    flex: 1 1 55%;
+    max-width: 600px;
+  }
+  
+  .counseling-questions .text h2 {
+    font-size: 1.8rem;
+    color: #142526;
+    margin-bottom: 1rem;
+  }
+  
+  .counseling-questions .text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #142526;
+    margin-bottom: 1.25rem;
+  }
+  
+  .counseling-questions .text ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+  }
+  
+  .counseling-questions .text ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .counseling-questions .text ul li::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    display: inline-block;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-top: 0.2rem;
+  }
+  
+  .counseling-questions .image {
+    flex: 1 1 35%;
+    min-width: 280px;
+    max-width: 400px;
+  }
+  
+  .counseling-questions .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #aaa; /* temp filler color */
+  }
+  
+  /* === Unique Counseling Approach === */
+  .counseling-approach {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+  }
+  
+  .counseling-approach h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .approach-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .approach-cards .card {
+    background: #444;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 300px;
+    flex: 1;
+  }
+  
+  /* === Counseling Benefits === */
+  .counseling-benefits {
+    background: #e6e6e6;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .benefit {
+    background: none;
+    padding: 1rem;
+  }
+  
+  .benefit h3::before {
+    content: '᯽'; /* https://emojicombos.com/leaf */
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  
+  /* === Final CTA === */
+  .counseling-cta {
+    background: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .counseling-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .counseling-cta a {
+    display: inline-block;
+    background: #444;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 1.5rem;
+  }
 
 /* ===============================
     Pages: Evals
    =============================== */
 
-/* Evaluation types */
-/* Process explanation */
-/* Insurance/payment info */
+/* General Layout */
+section {
+    padding: 4rem 1.5rem;
+  }
+  h1, h2, h3 {
+    color: #0f1f21;
+  }
+  p {
+    color: #162326;
+    line-height: 1.6;
+  }
+
+   /* Hero Section */
+.evals-hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  .evals-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .evals-hero p {
+    font-size: 1.6rem;
+  }
+  
+  /* Clear Answers Section */
+  .evals-answers {
+    background-color: #e5e5e5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+  }
+  .evals-answers .image img {
+    max-width: 300px;
+    height: auto;
+  }
+  .evals-answers .text {
+    max-width: 600px;
+  }
+  .evals-answers h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  /* Evaluation Explanation */
+  .evals-what {
+    background-color: #fff;
+  }
+  .evals-what ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .evals-what li {
+    position: relative;
+    padding-left: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .evals-what li::before {
+    content: url('/images/leaf-icon.svg'); /* Use your actual path */
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+  }
+  
+  /* Who Needs It Section */
+  .evals-who {
+    background-color: #e5e5e5;
+  }
+  .evals-who .evals-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media(min-width: 768px) {
+    .evals-who .evals-groups {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .group {
+    display: flex;
+    align-items: flex-start;
+  }
+  .group::before {
+    content: url('/images/leaf-icon.svg');
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  /* Assessment Areas */
+  .evals-areas .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .area {
+    background-color: #555;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 260px;
+    font-weight: 600;
+  }
+  
+  /* What to Expect Section */
+  .evals-expect {
+    background-color: #e5e5e5;
+    text-align: center;
+  }
+  .evals-expect .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  @media(min-width: 768px) {
+    .evals-expect .steps {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .step {
+    background-color: #555;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    flex: 1;
+    max-width: 300px;
+  }
+  .step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .evals-expect a {
+    background-color: #555;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  /* CTA Section */
+  .evals-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .evals-cta h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .evals-cta p {
+    font-size: 1.2rem;
+  }
 
 /* ===============================
     Pages: 404
    =============================== */
 
-/* Error message styling */
-/* Back-to-home link */
+
 
 /* ===============================
     Responsive & Utility Classes
    =============================== */
 
-/* Breakpoints */
-/* Flex/grid helpers */
-/* Visibility or margin helpers */
+
