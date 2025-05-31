@@ -17,14 +17,17 @@
     <link rel="icon" type="image/png" href="/images/lrm-logo-image.png" sizes="16x16">
 </head>
 <body>
-
-    {{> header}}  <!-- This will include the header on every page -->
+  <div id="loader">Loading...</div>
+  <div id="main-content" style="display:none;">
+    {{> header}}
 
     <main>
-        {{{body}}}  <!-- This is where each page's unique content will go -->
+        {{{body}}}
     </main>
 
-    {{> footer}}  <!-- This will include the footer on every page -->
+    {{> footer}}
+  </div>
 
+    <script src="/js/main.js"></script>
 </body>
 </html>

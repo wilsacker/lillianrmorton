@@ -26,6 +26,8 @@
   box-sizing: border-box;
 }
 
+
+
 /* Body and html defaults */
 html {
   font-size: var(--font-size);
