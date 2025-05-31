@@ -1275,6 +1275,10 @@ footer {
   margin-bottom: 1rem;
 }
 
+.counseling-approach h3 {
+    color: white;
+  }
+
 .approach-cards {
   display: flex;
   flex-wrap: wrap;
@@ -1444,8 +1448,8 @@ section {
   display: grid;
   gap: 1.5rem;
   margin: 2rem auto;
-  max-width: 900px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 850px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .area {
   background-color: #58595b;
