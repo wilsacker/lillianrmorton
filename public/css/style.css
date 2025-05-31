@@ -1556,6 +1556,9 @@ section {
   font-weight: bold;
   margin-top: 2rem;
 }
+.evals-expect a:hover {
+  background-color: #474849;
+}
 /* Final CTA */
 .evals-cta {
   background-color: #fff;
@@ -1575,7 +1578,7 @@ section {
    =============================== */
 
 
-   
+
 /* ===============================
     Responsive & Utility Classes
    =============================== */
