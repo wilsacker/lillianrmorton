@@ -1544,6 +1544,7 @@ section {
 .step h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  color: white
 }
 .evals-expect a {
   display: inline-block;
