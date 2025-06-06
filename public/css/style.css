@@ -6,12 +6,12 @@
 
 /* Root variables */
 :root {
-  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-highlight: 'Amiri', serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
   --font-size: 20px;
   --line-height: 1.6;
   --color-text: #333;
   --color-bg: #f9f9f9;
-  --color-accent: #007bff;
   --color-muted: #666;
   --border-radius: 6px;
   --transition: 0.3s ease;
@@ -53,7 +53,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: #FBF0E7;
   padding: 1.25rem 2rem;
   height: 110px; /* or whatever fits your design */
   box-sizing: border-box;
@@ -165,7 +165,7 @@ header {
 }
 
 .nav-appointment-button .appointment-button {
-  background-color: #444;
+  background-color: #4C4844;
   color: #fff; /* Ensure white text */
   padding: 0.75rem 1.5rem;
   border-radius: 40px;
