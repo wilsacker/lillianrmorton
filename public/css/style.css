@@ -86,7 +86,6 @@ button {
 a:hover,
 button:hover {
   color: var(--color-text-light);
-  transform: scale(1.1rem);
 }
 
 /* ===============================
