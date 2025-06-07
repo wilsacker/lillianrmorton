@@ -36,7 +36,6 @@
   --color-black: #000000;
 
   /* Visual Design */
-  --border-radius: 6px;
   --transition: 0.3s ease;
 }
 
@@ -62,8 +61,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-primary) !important;
-  color: var(--color-text-dark) !important;
+  font-family: var(--font-primary);
+  color: var(--color-text-dark);
 }
 
 body {
@@ -75,17 +74,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Button */
-a,
-button {
-  color: var(--color-button-primary);
-  font-family: var(--font-primary);
-  transition: background-color var(--transition), color var(--transition);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a:hover,
-button:hover {
+.button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background-color: var(--color-button-primary);
   color: var(--color-text-light);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-button-secondary);
+  transform: translateY(-2px);
 }
 
 /* ===============================
@@ -107,15 +114,6 @@ header {
 }
 
 /* Logo styling */
-#logo-title-button {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
-  min-width: 260px; /* Adjust as needed to match logo width */
-  z-index: 2;
-}
-
 .logo-img {
   height: 60px;
   width: auto;
@@ -150,11 +148,6 @@ header {
   text-decoration: none;
 }
 
-.nav-menu li:hover {
-  transform: scale(1.1);
-  transition: ease 0.2s;
-}
-
 /* Dropdown menu (for "Services") */
 .dropdown-icon {
   width: 10px;
@@ -170,7 +163,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   border-radius: var(--border-radius);
@@ -202,27 +195,10 @@ header {
 }
 
 /* Request appointment area */
-.nav-appointment-button {
+.nav-cta {
   margin-left: auto;
   z-index: 2;
   min-width: 180px; /* Adjust as needed to match button width */
-}
-
-.nav-appointment-button .appointment-button {
-  background-color: var(--color-button-primary);
-  color: var(--color-text-light);
-  padding: 0.75rem 1.5rem;
-  border-radius: 40px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
-}
-
-.nav-appointment-button .appointment-button:hover {
-  background: #222;
-  color: #fff;
 }
 
 /* ===============================
@@ -319,25 +295,27 @@ footer {
   gap: 3rem;
   flex-wrap: wrap; /* fallback for smaller viewports */
 }
+
 .hero-text {
   /* text content block */
   flex: 1 1 500px;
   max-width: 600px;
 }
+
 .hero-text h1 {
-  /* headline */
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--color-text);
 }
+
 .hero-text p {
-  /* subtext */
   font-size: 1.125rem;
   color: var(--color-muted);
   margin-bottom: 2rem;
 }
+
 .hero-text a {
   /* CTA button */
   display: inline-block;
@@ -345,19 +323,18 @@ footer {
   font-weight: 600;
   background-color: #ddd;
   border-radius: 999px;
-  color: var(--color-text);
+  color: var(--color-text-dark);
   text-decoration: none;
   transition: background-color var(--transition);
 }
-.hero-text a:hover {
-  background-color: #ccc;
-}
+
 .hero-image {
   flex: 1 1 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .hero-image img {
   /* hero image */
   max-width: 80%; /* !change depending on image size! */
@@ -373,6 +350,7 @@ footer {
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .questions h2 {
   /* heading */
   font-size: 1.875rem;
@@ -380,6 +358,7 @@ footer {
   margin-bottom: 1rem;
   color: var(--color-text);
 }
+
 .questions p {
   /* intro/closing paragraph */
   font-size: 1.125rem;
@@ -389,6 +368,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
 .question-cards {
   /* container for the cards */
   display: flex;
@@ -397,6 +377,7 @@ footer {
   gap: 2rem;
   margin: 3rem 0;
 }
+
 .question-cards .card {
   /* individual card styling */
   background-color: #fff;
@@ -410,6 +391,7 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
 .question-cards .card::before {
   content: "᯽"; /* https://emojicombos.com/leaf */
   color: #666;
@@ -417,12 +399,14 @@ footer {
   margin-bottom: 1rem;
   color: #999;
 }
+
 .question-cards .card p {
   /* card text */
   font-size: 1rem;
   color: var(--color-text);
   line-height: 1.5;
 }
+
 .questions > p:last-of-type {
   font-size: 1rem;
   margin-top: 2rem;
@@ -441,23 +425,27 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .answers-image {
   flex: 1 1 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .answers-image img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: var(--border-radius);
 }
+
 .answers-text {
   /* text container */
   flex: 1 1 500px;
   max-width: 600px;
 }
+
 .answers-text h2 {
   /* headline */
   font-size: 2rem;
@@ -466,18 +454,21 @@ footer {
   margin-bottom: 1rem;
   color: var(--color-text);
 }
+
 .answers-text p {
   /* subheadline */
   font-size: 1.125rem;
   color: var(--color-muted);
   margin-bottom: 2rem;
 }
+
 .answers-text ul {
   /* checklist */
   list-style: none;
   padding: 0;
   margin: 0 0 2rem 0;
 }
+
 .answers-text ul li {
   /* list items */
   display: flex;
@@ -487,12 +478,14 @@ footer {
   font-size: 1rem;
   color: var(--color-text);
 }
+
 .answers-text ul li::before {
   content: "✔";
   display: inline-block;
   font-size: 1.25rem;
   color: #999;
 }
+
 .answers-text a {
   /* CTA button */
   display: inline-block;
@@ -504,6 +497,7 @@ footer {
   border-radius: 999px;
   transition: background-color var(--transition);
 }
+
 .answers-text a:hover {
   background-color: #444;
 }
@@ -515,17 +509,20 @@ footer {
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .meet-lillian h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 0.5rem;
 }
+
 .meet-lillian p {
   font-size: 1rem;
   color: var(--color-muted);
   margin-bottom: 2rem;
 }
+
 .lillian-section {
   /* flex container for bio and image */
   display: flex;
@@ -537,10 +534,12 @@ footer {
   margin: 0 auto;
   text-align: left;
 }
+
 .bio-text {
   flex: 1 1 500px;
   max-width: 600px;
 }
+
 .bio-text h3 {
   /* subheadline */
   font-size: 1.25rem;
@@ -548,6 +547,7 @@ footer {
   margin-bottom: 1rem;
   color: var(--color-text);
 }
+
 .bio-text p {
   /* paragraphs */
   font-size: 1rem;
@@ -555,12 +555,14 @@ footer {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
+
 .bio-image {
   flex: 1 1 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .bio-image img {
   /* headshot image */
   width: 100%;
@@ -579,6 +581,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .three-steps h2 {
   /* section heading */
   font-size: 1.875rem;
@@ -586,6 +589,7 @@ footer {
   color: var(--color-text);
   margin-bottom: 3rem;
 }
+
 .steps {
   /* container for step cards */
   display: flex;
@@ -594,6 +598,7 @@ footer {
   flex-wrap: wrap;
   margin-bottom: 2.5rem;
 }
+
 .step {
   /* individual step card */
   background-color: #555;
@@ -607,12 +612,14 @@ footer {
   align-items: center;
   text-align: center;
 }
+
 .step h3 {
   /* step number + heading */
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .step h3::before {
   content: attr(data-step);
   display: block;
@@ -627,12 +634,14 @@ footer {
   font-size: 1.25rem;
   border: 2px solid #373737;
 }
+
 .step p {
   /* step description */
   font-size: 0.95rem;
   color: white;
   line-height: 1.5;
 }
+
 .three-steps a {
   /* bottom CTA button */
   display: inline-block;
@@ -644,6 +653,7 @@ footer {
   border-radius: 999px;
   transition: background-color var(--transition);
 }
+
 .three-steps a:hover {
   background-color: #444;
 }
@@ -655,6 +665,7 @@ footer {
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .services-grid h2 {
   /* heading */
   font-size: 1.75rem;
@@ -662,6 +673,7 @@ footer {
   color: var(--color-text);
   margin-bottom: 3rem;
 }
+
 .service-buttons {
   /* container for links */
   display: grid;
@@ -670,6 +682,7 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .service-buttons a {
   /* button link */
   background-color: #444;
@@ -685,9 +698,11 @@ footer {
   transition: background-color var(--transition);
   position: relative;
 }
+
 .service-buttons a:hover {
   background-color: #333;
 }
+
 .service-buttons a span {
   /* subtext span inside buttons */
   font-weight: 400;
@@ -698,6 +713,7 @@ footer {
   align-items: center;
   gap: 0.5rem;
 }
+
 .service-buttons a span::after {
   content: "↓";
   font-size: 1.25rem;
@@ -713,6 +729,7 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .closing-message h2 {
   /* heading */
   font-size: 1.75rem;
@@ -720,6 +737,7 @@ footer {
   color: var(--color-text);
   margin-bottom: 1rem;
 }
+
 .closing-message p {
   /* paragraph text */
   font-size: 1.125rem;
@@ -1399,10 +1417,12 @@ section {
   padding: 5rem 1rem;
   background-color: #fff;
 }
+
 .evals-hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
 }
+
 .evals-hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -1418,19 +1438,23 @@ section {
   gap: 2rem;
   padding: 4rem 1.5rem;
 }
+
 .evals-answers .image {
   flex: 1 1 300px;
   max-width: 450px;
 }
+
 .evals-answers .image img {
   width: 100%;
   height: auto;
   display: block;
 }
+
 .evals-answers .text {
   flex: 1 1 400px;
   max-width: 600px;
 }
+
 .evals-answers p strong {
   font-weight: 700;
 }
@@ -1441,10 +1465,12 @@ section {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .evals-what ul {
   list-style: none;
   padding-left: 0;
 }
+
 .evals-what li::before {
   content: "᯽"; /* https://emojicombos.com/leaf */
   margin-right: 0.5rem;
@@ -1521,11 +1547,13 @@ section {
   display: inline;
   margin: 0;
 }
+
 /* Common Areas of Assessment */
 .evals-areas {
   background-color: #fff;
   text-align: center;
 }
+
 .areas-grid {
   display: grid;
   gap: 1.5rem;
@@ -1533,6 +1561,7 @@ section {
   max-width: 850px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 .area {
   background-color: #58595b;
   color: white;
@@ -1540,6 +1569,7 @@ section {
   border-radius: 12px;
   font-weight: 600;
 }
+
 .area small {
   font-weight: 400;
   font-size: 0.9rem;
@@ -1552,18 +1582,21 @@ section {
   background-color: #f0f2f5;
   text-align: center;
 }
+
 .steps {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 3rem;
 }
+
 @media (min-width: 768px) {
   .steps {
     flex-direction: row;
     justify-content: space-between;
   }
 }
+
 .step {
   background-color: #58595b;
   color: white;
@@ -1571,11 +1604,13 @@ section {
   border-radius: 14px;
   flex: 1;
 }
+
 .step h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: white;
 }
+
 .evals-expect a {
   display: inline-block;
   background-color: #58595b;
@@ -1586,17 +1621,21 @@ section {
   font-weight: bold;
   margin-top: 2rem;
 }
+
 .evals-expect a:hover {
   background-color: #474849;
 }
+
 /* Final CTA */
 .evals-cta {
   background-color: #fff;
   text-align: center;
 }
+
 .evals-cta h2 {
   font-size: 2rem;
 }
+
 .evals-cta p {
   font-size: 1.25rem;
   max-width: 700px;
