@@ -233,6 +233,7 @@ header {
 
 footer {
   background-color: var(--color-footer);
+  color: var(--color-text-light);
   padding: 3rem 2rem;
 }
 
@@ -249,10 +250,6 @@ footer {
 .footer-section img {
   max-width: 150px;
   height: auto;
-}
-
-.footer-section p {
-  color: var(--color-text-light);
 }
 
 /* ===============================
@@ -1593,6 +1590,28 @@ section {
 /* ===============================
     Pages: 404
    =============================== */
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f3f4f6;
+}
+
+.not-found h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #142324;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
 
 /* ===============================
     Responsive & Utility Classes
