@@ -7,22 +7,33 @@
 /* Root variables */
 :root {
   /* Typography */
-  --font-primary: "DM Sans", sans-serif;
-  --font-secondary: "Amiri", serif;
+  --font-primary: "Amiri", serif;
+  --font-secondary: "DM Sans", sans-serif;
 
   --font-size: 20px;
   --line-height: 1.6;
 
   /* Brand Color Palette */
-  --color-text: #3e4e50;
-  --color-bg: #fbf0e7;
+  --color-header: #cfe0e3;
+  --color-footer: #4c4844;
+  --color-text-dark: #3e4e50;
+  --color-text-light: #ffffff;
+  --color-bg-primary: #fbf0e7;
+  --color-bg-secondary: #f4b88a;
+  --color-bg-tertiary: #ded5cb;
+  --color-bg-quaternary: #3e4e50;
+  --color-bg-dark: #2b2e2f;
+
+  /* Button Colors */
+  --color-button-primary: #f4b88a;
+  --color-button-secondary: #76a4ae;
+
+  /* Accent Colors */
   --color-accent: #76a4ae;
-  --color-muted: #4c4844;
   --color-highlight: #f4b88a;
   --color-soft-gray: #ded5cb;
-  --color-alt-bg: #cfe0e3;
   --color-white: #ffffff;
-  --color-dark: #2b2e2f;
+  --color-black: #000000;
 
   /* Visual Design */
   --border-radius: 6px;
@@ -45,36 +56,37 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary) !important;
-  color: var(--color-text) !important;
-  background-color: var(--color-bg) !important;
+  color: var(--color-text-dark) !important;
+}
+
+body {
+  font-family: var(--font-secondary);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-primary);
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-secondary) !important;
-    color: var(--color-text) !important;
-  }
-
 /* Button */
+a,
 button {
-  color: var(--color-accent) !important;
-  font-family: var(--font-primary) !important;
+  color: var(--color-button-primary);
+  font-family: var(--font-primary);
   transition: background-color var(--transition), color var(--transition);
 }
 
 a:hover,
 button:hover {
-  color: var(--color-highlight) !important;
-}
-
-.appointment-button {
-  background-color: var(--color-accent) !important;
-  color: var(--color-white) !important;
-  border-radius: 999px;
+  color: var(--color-text-light);
+  transform: scale(1.1rem);
 }
 
 /* ===============================
@@ -86,7 +98,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #fbf0e7;
+  background-color: var(--color-header);
   padding: 1.25rem 2rem;
   height: 110px; /* or whatever fits your design */
   box-sizing: border-box;
@@ -135,13 +147,13 @@ header {
 .dropdown-btn {
   font-weight: 700;
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text-dark);
   text-decoration: none;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
-  color: #0c2b2b; /* Darker color for active */
+.nav-menu li:hover {
+  transform: scale(1.1);
+  transition: ease 0.2s;
 }
 
 /* Dropdown menu (for "Services") */
@@ -159,7 +171,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: var(--color-bg-primary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   border-radius: var(--border-radius);
@@ -178,7 +190,7 @@ header {
 .dropdown-content li a {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #333;
+  color: var(--color-text-dark);
   font-weight: 600;
   text-decoration: none;
   transition: background 0.2s;
@@ -186,8 +198,8 @@ header {
 
 /* Hover effect for dropdown links */
 .dropdown-content li a:hover {
-  background: #f0f0f0;
-  color: var(--color-accent);
+  background: var(--color-bg-primary);
+  color: var(--color-text-dark);
 }
 
 /* Request appointment area */
@@ -198,8 +210,8 @@ header {
 }
 
 .nav-appointment-button .appointment-button {
-  background-color: #4c4844;
-  color: #fff; /* Ensure white text */
+  background-color: var(--color-button-primary);
+  color: var(--color-text-light);
   padding: 0.75rem 1.5rem;
   border-radius: 40px;
   font-weight: 700;
@@ -245,9 +257,10 @@ header {
    =============================== */
 
 footer {
-  background-color: #aaa;
+  background-color: var(--color-footer);
   padding: 3rem 2rem;
 }
+
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -257,35 +270,20 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .footer-section img {
   max-width: 150px;
   height: auto;
 }
 
-/* Nav menu styling */
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+.footer-section p {
+  color: var(--color-text-light);
 }
-.nav-menu li {
-  margin-bottom: 0.5rem;
-}
-.nav-menu a,
-.nav-menu span {
-  text-decoration: none;
-  color: #1f2d2d;
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-.nav-menu a:hover {
-  text-decoration: underline;
-}
+
 /* Footer appointment button */
 .footer-appointment-button .appointment-button {
-  background-color: #444;
-  color: white;
+  background-color: var(--color-button-primary);
+  color: var(--color-text-light);
   padding: 0.85rem 2rem;
   font-weight: 700;
   text-decoration: none;
