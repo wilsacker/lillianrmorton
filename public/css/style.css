@@ -1265,16 +1265,22 @@ footer {
 .counseling-questions {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-between;
   background-color: var(--color-bg-secondary);
   padding: 4rem 2rem;
   gap: 2rem;
 }
 
-.counseling-questions .text {
+.counseling-questions .questions-list {
   flex: 1 1 55%;
-  max-width: 500px;
+  min-width: 250px;
+}
+
+.counseling-questions .text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .counseling-questions .text h2 {
@@ -1314,9 +1320,9 @@ footer {
 }
 
 .counseling-questions .image {
-  flex: 1 1 35%;
-  min-width: 280px;
+  flex: 1 1 40%;
   max-width: 400px;
+  min-width: 250px;
 }
 
 .counseling-questions .image img {
