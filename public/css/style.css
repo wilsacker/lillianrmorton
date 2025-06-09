@@ -169,7 +169,7 @@ header {
   background-color: var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   z-index: 100;
   min-width: 200px;
   list-style: none;
@@ -179,6 +179,7 @@ header {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  border-radius: 8px;
 }
 
 /* Style dropdown links */
@@ -195,6 +196,7 @@ header {
 .dropdown-content li a:hover {
   background: var(--color-bg-primary);
   color: var(--color-text-dark);
+  border-radius: 8px;
 }
 
 /* Request appointment area */
