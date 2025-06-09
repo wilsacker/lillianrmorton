@@ -127,11 +127,14 @@ header {
 }
 
 /* Navigation links */
+/* ===============================
+    Desktop Navigation Menu Styles
+   =============================== */
 .nav-menu {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .nav-menu > ul {
@@ -227,6 +230,34 @@ header {
 
   .nav-appointment-button {
     display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color-header);
+    padding: 2rem 0;
+    z-index: 99;
+    align-items: center;
+  }
+
+  .nav-menu.active > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-menu.active li a {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  header {
+    flex-direction: row;
   }
 }
 
