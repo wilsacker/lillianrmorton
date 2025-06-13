@@ -128,14 +128,15 @@ header {
   align-items: center;
   background-color: var(--color-header);
   padding: 1.25rem 2rem;
-  height: 110px;
+  height: 150px;
   box-sizing: border-box;
   z-index: 100;
 }
 
 /* Logo styling */
 .logo-img {
-  height: 60px;
+  height: 80px;
+  margin-bottom: 15px;
   width: auto;
 }
 
@@ -507,9 +508,6 @@ footer {
 /* Answers Section Wrapper */
 .answers-wrapper {
   background-color: var(--color-bg-primary);
-  display: flex;
-  align-items: center;
-  width: 100%;
 }
 
 .answers {
@@ -518,17 +516,20 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 3rem;
+  justify-content: space-between;
 }
 
 .answers-image {
-  flex: 1 1 400px;
+  flex-grow: 1;
+  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .answers-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: none;
   height: auto;
   object-fit: cover;
   border-radius: var(--border-radius);
@@ -537,7 +538,7 @@ footer {
 .answers-text {
   /* text container */
   flex: 1 1 500px;
-  max-width: 600px;
+  flex-grow: 1;
 }
 
 .answers-text h2 {
@@ -577,7 +578,7 @@ footer {
   content: "✔";
   display: inline-block;
   font-size: 1.25rem;
-  color: #999;
+  color: var(--color-button-secondary);
 }
 
 .answers-text a:hover {
@@ -585,10 +586,11 @@ footer {
 }
 
 /* Meet Lillian Section */
-.meet-lillian {
-  /* section wrapper */
+.meet-lillian-wrapper {
   background-color: var(--color-bg-tertiary);
-  padding: 4rem 2rem;
+}
+
+.meet-lillian {
   text-align: center;
 }
 
@@ -608,18 +610,15 @@ footer {
 .lillian-section {
   /* flex container for bio and image */
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
 }
 
 .bio-text {
   flex: 1 1 500px;
-  max-width: 600px;
+  text-align: center;
 }
 
 .bio-text h3 {
@@ -639,20 +638,15 @@ footer {
 }
 
 .bio-image {
-  flex: 1 1 300px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .bio-image img {
-  /* headshot image */
-  width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
   object-fit: cover;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
 }
 
 /* 3 Steps Section */
@@ -684,7 +678,7 @@ footer {
 .step {
   /* individual step card */
   background-color: var(--color-bg-quaternary);
-  color: white;
+  color: var(--color-text-light);
   padding: 2rem 1.5rem;
   border-radius: 24px;
   max-width: 300px;
@@ -708,8 +702,8 @@ footer {
   width: 48px;
   height: 48px;
   margin: 0 auto 1rem;
-  background-color: white;
-  color: #333;
+  background-color: var(--color-soft-gray);
+  color: var(--color-text-dark);
   font-weight: 700;
   border-radius: 50%;
   line-height: 48px;
