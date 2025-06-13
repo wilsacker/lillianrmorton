@@ -19,10 +19,10 @@
   --color-text-dark: #3e4e50;
   --color-text-light: #ffffff;
   --color-bg-primary: #fbf0e7;
-  --color-bg-secondary: #ded5cb;
+  --color-bg-secondary: #dde8dc;
   --color-bg-tertiary: #e3edf0;
-  --color-bg-quaternary: #3e4e50;
-  --color-bg-quinary: #dde8dc;
+  --color-bg-quaternary: #ded5cb;
+  --color-bg-quinary: #3e4e50;
   --color-bg-dark: #2b2e2f;
   --color-accent-hover-blue:rgb(30, 56, 62);
 
@@ -442,7 +442,7 @@ footer {
 
 /* Unanswered Questions Section */
 .questions-wrapper {
-  background-color: var(--color-bg-quinary);
+  background-color: var(--color-bg-secondary);
 }
 
 .questions {
@@ -474,7 +474,7 @@ footer {
 
 .question-cards .card {
   /* individual card styling */
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-quinary);
   padding: 2rem 1.5rem;
   width: 100%;
   border-radius: 20px;
@@ -676,7 +676,7 @@ footer {
 
 .step {
   /* individual step card */
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-quinary);
   color: var(--color-text-light);
   padding: 2rem 1.5rem;
   border-radius: 24px;
@@ -719,7 +719,7 @@ footer {
 
 /* Services Grid Section */
 .services-grid {
-  background-color: var(--color-bg-quinary);
+  background-color: var(--color-bg-secondary);
   text-align: center;
 }
 
@@ -742,7 +742,7 @@ footer {
 
 .service-buttons a {
   /* button link */
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-quinary);
   color: var(--color-text-light);
   border-radius: 24px;
   padding: 2rem;
@@ -859,7 +859,7 @@ footer {
 .about-message p {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-text-dark);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
@@ -899,8 +899,8 @@ footer {
 }
 
 .approach-cards .card {
-  background-color: var(--color-bg-quaternary);
-  color: white;
+  background-color: var(--color-bg-quinary);
+  color: var(--color-text-light);
   padding: 2rem 1.5rem;
   border-radius: 24px;
   max-width: 300px;
@@ -1223,7 +1223,7 @@ footer {
 .contact-info {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quaternary);
 }
 
 .contact-info p {
@@ -1261,7 +1261,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quaternary);
   padding: 4rem 2rem;
   gap: 2rem;
 }
@@ -1352,7 +1352,7 @@ footer {
 }
 
 .approach-cards .card {
-  background: var(--color-bg-quaternary);
+  background: var(--color-bg-quinary);
   color: white;
   padding: 2rem;
   border-radius: 20px;
@@ -1362,7 +1362,7 @@ footer {
 
 /* === Counseling Benefits === */
 .counseling-benefits {
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-quaternary);
   padding: 4rem;
   text-align: center;
 }
@@ -1426,7 +1426,7 @@ footer {
 
 /* Clear Answers Section */
 .evals-answers {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quaternary);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1496,7 +1496,7 @@ padding-bottom: 1.5rem;
 
 /* Who Needs an Evaluation */
 .evals-who {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quaternary);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -1593,7 +1593,7 @@ padding-bottom: 1.5rem;
 
 /* What to Expect */
 .evals-expect {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quaternary);
   text-align: center;
   padding: 4rem;
 }
