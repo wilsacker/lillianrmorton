@@ -216,7 +216,7 @@ header {
 /* Hover effect for dropdown links */
 .dropdown-content li a:hover {
   background: var(--color-soft-gray);
-  color: var(--color-button-secondary);
+  color: var(--color-text-dark);
   border-radius: 8px;
   padding: 0.5rem 1.5rem;
   transition: ease 0.2s;
@@ -304,7 +304,7 @@ footer {
 }
 
 .footer-section img {
-  min-width: 200px;
+  min-width: 250px;
   height: auto;
 }
 
@@ -365,14 +365,18 @@ footer {
 
 .footer-dropdown-content li a {
   display: block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   color: var(--color-text-dark);
   font-weight: 500;
 }
 
 .footer-dropdown-content a:hover {
-  background-color: var(--color-bg-primary);
+  background: var(--color-soft-gray);
+  color: var(--color-text-dark);
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  transition: ease 0.2s;
 }
 
 /* ===============================
@@ -437,15 +441,15 @@ footer {
 }
 
 /* Unanswered Questions Section */
-.questions {
-  /* section wrapper */
+.questions-wrapper {
   background-color: var(--color-bg-quinary);
-  padding: 4rem 2rem;
+}
+
+.questions {
   text-align: center;
 }
 
 .questions h2 {
-  /* heading */
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -453,7 +457,6 @@ footer {
 }
 
 .questions p {
-  /* intro/closing paragraph */
   font-size: 1.125rem;
   color: var(--color-muted);
   margin-bottom: 2rem;
@@ -465,18 +468,16 @@ footer {
 .question-cards {
   /* container for the cards */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 3rem 0;
 }
 
 .question-cards .card {
   /* individual card styling */
   background-color: var(--color-bg-quaternary);
   padding: 2rem 1.5rem;
-  border-radius: 20px;
   width: 100%;
+  border-radius: 20px;
   max-width: 320px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
