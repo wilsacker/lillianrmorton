@@ -400,13 +400,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  gap: 3rem;
   flex-wrap: wrap;
 }
 
 .hero-text {
-  /* text content block */
   flex: 1 1 500px;
   max-width: 600px;
 }
@@ -416,28 +413,22 @@ footer {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: var(--color-text);
+  color: var(--color-text-dark);
 }
 
 .hero-text p {
   font-size: 1.125rem;
-  color: var(--color-muted);
   margin-bottom: 2rem;
 }
 
 .hero-image {
   flex: 1 1 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .hero-image img {
-  /* hero image */
-  max-width: 80%; /* !change depending on image size! */
-  height: auto;
-  border-radius: var(--border-radius);
-  object-fit: cover;
+  max-width: 500px;
 }
 
 /* Unanswered Questions Section */
@@ -531,7 +522,6 @@ footer {
   max-width: none;
   height: auto;
   object-fit: cover;
-  border-radius: var(--border-radius);
 }
 
 .answers-text {
@@ -783,7 +773,6 @@ footer {
 }
 
 .closing-message {
-  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -841,7 +830,6 @@ footer {
   width: 100%;
   max-width: 600px;
   height: auto;
-  border-radius: var(--border-radius);
   object-fit: cover;
 }
 
@@ -1022,7 +1010,6 @@ footer {
 .consultation-questions .image img {
   width: 100%;
   max-width: 400px;
-  border-radius: var(--border-radius);
 }
 
 /* What Is a Consultation */
@@ -1107,7 +1094,6 @@ footer {
 .consultation-benefits .image img {
   width: 100%;
   max-width: 350px;
-  border-radius: var(--border-radius);
 }
 
 .consultation-benefits .benefits-list {
