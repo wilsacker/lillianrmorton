@@ -19,9 +19,9 @@
   --color-text-dark: #3e4e50;
   --color-text-light: #ffffff;
   --color-bg-primary: #fbf0e7;
-  --color-bg-secondary: #dde8dc;
-  --color-bg-tertiary: #e3edf0;
-  --color-bg-quaternary: #ded5cb;
+  --color-bg-secondary: #ded5cb;
+  --color-bg-tertiary: #cfe0e3;
+  --color-bg-quaternary: #e3edf0;
   --color-bg-quinary: #3e4e50;
   --color-bg-dark: #2b2e2f;
   --color-accent-hover-blue:rgb(30, 56, 62);
@@ -185,8 +185,8 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
+  transform: translateX(-65px);
   top: 100%;
-  left: 0;
   background-color: var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
@@ -210,6 +210,7 @@ header {
   color: var(--color-text-dark);
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
   transition: background 0.2s;
 }
 
@@ -368,7 +369,7 @@ footer {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   color: var(--color-text-dark);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer-dropdown-content a:hover {
@@ -1209,7 +1210,7 @@ footer {
 .contact-info {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
 }
 
 .contact-info p {
@@ -1247,7 +1248,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
   padding: 4rem 2rem;
   gap: 2rem;
 }
@@ -1412,7 +1413,7 @@ footer {
 
 /* Clear Answers Section */
 .evals-answers {
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1482,7 +1483,7 @@ padding-bottom: 1.5rem;
 
 /* Who Needs an Evaluation */
 .evals-who {
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -1563,7 +1564,7 @@ padding-bottom: 1.5rem;
 }
 
 .area {
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
   color: white;
   padding: 1.5rem;
   border-radius: 12px;
@@ -1579,7 +1580,7 @@ padding-bottom: 1.5rem;
 
 /* What to Expect */
 .evals-expect {
-  background-color: var(--color-bg-quaternary);
+  background-color: var(--color-bg-secondary);
   text-align: center;
   padding: 4rem;
 }
