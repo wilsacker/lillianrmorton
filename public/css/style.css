@@ -68,6 +68,18 @@ h6 {
   color: var(--color-text-dark);
 }
 
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
 body {
   font-family: var(--font-secondary);
   color: var(--color-text-dark);
@@ -85,6 +97,13 @@ a {
 section {
   padding: 4rem 0; /* consistent spacing between sections */
 }
+
+section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
 
 /* Uniform Button Class */
 .button {
@@ -106,6 +125,7 @@ section {
 /* Uniform Wrapper Class */
 .wrapper {
   max-width: 1400px;
+  min-height: 300px;
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
@@ -136,11 +156,6 @@ header {
 .logo-img {
   height: 60px;
   width: auto;
-}
-
-.logo h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 /* Navigation links */
@@ -409,10 +424,8 @@ footer {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
   color: var(--color-text-dark);
 }
 
@@ -441,15 +454,12 @@ footer {
 }
 
 .questions h2 {
-  font-size: 1.875rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   color: var(--color-text-dark);
 }
 
 .questions p {
   font-size: 1.125rem;
-  color: var(--color-muted);
   margin-bottom: 2rem;
   max-width: 800px;
   margin-left: auto;
@@ -457,14 +467,12 @@ footer {
 }
 
 .question-cards {
-  /* container for the cards */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .question-cards .card {
-  /* individual card styling */
   background-color: var(--color-bg-quinary);
   padding: 2rem 1.5rem;
   width: 100%;
@@ -859,7 +867,7 @@ footer {
   font-size: 2rem;
   display: block;
   margin-bottom: 1rem;
-  color: #999;
+  color: var(--color-button-secondary);
 }
 
 /* About Me: Unique Approach Section */
@@ -932,31 +940,41 @@ footer {
 
 /* Hero Section */
 .consultation-hero {
-  padding: 7rem;
+  background-color: var(--color-bg-primary);
   text-align: center;
-  background-color: #fff;
+  
+}
+
+.consultation-hero.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .consultation-hero h1 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .consultation-hero p {
-  font-size: 1.25rem;
-  color: var(--color-muted);
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Questions Section */
 .consultation-questions {
+  background-color: var(--color-bg-secondary);
+  padding: 4rem 0;
+}
+
+.consultation-questions .wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3rem;
-  padding: 4rem 2rem;
-  background-color: #e1e1e1;
   align-items: flex-start;
 }
 
@@ -968,7 +986,6 @@ footer {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text);
 }
 
 .consultation-questions .text p {
@@ -989,16 +1006,15 @@ footer {
   position: relative;
   padding-left: 2rem;
   font-weight: 600;
-  color: var(--color-text);
 }
 
 .consultation-questions li::before {
-  content: "᯽"; /* https://emojicombos.com/leaf */
+  content: "᯽";
   position: absolute;
   left: 0;
   top: 0;
   font-size: 1.1rem;
-  color: #888;
+  color: var(--color-button-secondary);
 }
 
 .consultation-questions .image {
@@ -1010,12 +1026,18 @@ footer {
 .consultation-questions .image img {
   width: 100%;
   max-width: 400px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* What Is a Consultation */
 .what-is-consultation {
-  padding: 4rem 2rem;
-  max-width: 1000px;
+  background-color: var(--color-bg-primary);
+}
+
+.what-is-consultation .wrapper {
   margin: 0 auto;
 }
 
@@ -1023,12 +1045,10 @@ footer {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text);
 }
 
 .what-is-consultation p {
   font-size: 1rem;
-  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -1043,29 +1063,26 @@ footer {
   padding-left: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1rem;
-  color: var(--color-text);
 }
 
 .what-is-consultation li::before {
-  content: "᯽"; /* https://emojicombos.com/leaf */
+  content: "᯽";
   position: absolute;
   left: 0;
   top: 0;
-  color: #aaa;
+  color: var(--color-button-secondary);
   font-size: 1.1rem;
 }
 
 /* Why Choose a Consultation */
 .why-consultation {
-  background-color: #e1e1e1;
-  padding: 4rem 2rem;
+  background-color: var(--color-bg-tertiary);
   text-align: center;
 }
 
 .why-consultation h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
@@ -1093,7 +1110,7 @@ footer {
 
 .consultation-benefits .image img {
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
 }
 
 .consultation-benefits .benefits-list {
@@ -1110,35 +1127,32 @@ footer {
   padding-left: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1rem;
-  color: var(--color-text);
 }
 
 .consultation-benefits .benefits-list li::before {
-  content: "᯽"; /* https://emojicombos.com/leaf */
+  content: "᯽";
   position: absolute;
   left: 0;
   top: 0;
-  color: #aaa;
+  color: var(--color-button-secondary);
   font-size: 1.1rem;
 }
 
 /* Call to Action */
 .consultation-cta {
-  padding: 4rem 2rem;
+  background-color: var(--color-bg-primary);
+  padding: 4rem 0;
   text-align: center;
-  background-color: #fff;
 }
 
 .consultation-cta h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text);
 }
 
 .consultation-cta p {
   font-size: 1.125rem;
-  color: var(--color-text);
   margin-bottom: 2rem;
 }
 
@@ -1233,7 +1247,7 @@ footer {
 }
 
 .counseling-hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -1309,6 +1323,7 @@ footer {
   min-width: 20px;
   height: 20px;
   margin-top: 0.2rem;
+  color: var(--color-button-secondary);
 }
 
 .counseling-questions .image {
@@ -1332,7 +1347,6 @@ footer {
 /* === Unique Counseling Approach === */
 .counseling-approach-wrapper {
   background: var(--color-bg-primary);
-  padding: 4rem 0;
 }
 
 .counseling-approach {
@@ -1341,7 +1355,7 @@ footer {
 
 .counseling-approach h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .counseling-approach h3 {
@@ -1400,6 +1414,7 @@ footer {
   content: "᯽"; /* https://emojicombos.com/leaf */
   display: block;
   margin: 0 auto 0.5rem;
+  color: var(--color-button-secondary);
 }
 
 /* === Final CTA === */
@@ -1511,6 +1526,7 @@ padding-bottom: 1.5rem;
   content: "᯽"; /* https://emojicombos.com/leaf */
   margin-right: 0.5rem;
   font-size: 1rem;
+  color: var(--color-button-secondary);
 }
 
 /* Who Needs an Evaluation */
@@ -1565,6 +1581,7 @@ padding-bottom: 1.5rem;
   width: 30px;
   height: 30px;
   margin-top: 0.2rem;
+  color: var(--color-button-secondary);
 }
 
 .group h3 {
