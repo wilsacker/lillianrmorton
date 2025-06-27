@@ -71,7 +71,6 @@ h6 {
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
 }
 
 h2 {
@@ -429,6 +428,7 @@ footer {
   font-weight: 700;
   line-height: 1.2;
   color: var(--color-text-dark);
+  margin-bottom: 2rem;
 }
 
 .hero-text p {
@@ -985,9 +985,7 @@ footer {
 }
 
 .consultation-hero h1 {
-  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .consultation-hero p {
@@ -1280,9 +1278,7 @@ footer {
 }
 
 .counseling-hero h1 {
-  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .counseling-hero p {
@@ -1399,7 +1395,7 @@ footer {
   margin: 2rem 0;
 }
 
-.couseling-approach-cards .card {
+.counseling-approach-cards .card {
   background: var(--color-bg-quinary);
   color: white;
   padding: 2rem;
@@ -1476,17 +1472,22 @@ footer {
 
 .evals-hero {
   text-align: center;
-  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px; /* adjust this to match your desired vertical space */
+  padding: 40px 0; /* optional: adjust as needed */
 }
 
 .evals-hero h1 {
-  font-size: 2.5rem;
   font-weight: 700;
 }
 
 .evals-hero p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Clear Answers Section */
@@ -1668,7 +1669,8 @@ padding-bottom: 1.5rem;
 
 .steps {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1677,20 +1679,19 @@ padding-bottom: 1.5rem;
  color: white
 }
 
-@media (min-width: 768px) {
-  .steps {
-    flex-direction: row; 
-    justify-content: space-between;
-  }
-}
-
 /* Final CTA */
 .evals-cta-wrapper {
   background-color: var(--color-bg-primary);
+  padding: 80px 0;
 }
 
 .evals-cta {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* Optional: set based on desired section height */
 }
 
 .evals-cta h2 {
@@ -1700,7 +1701,7 @@ padding-bottom: 1.5rem;
 .evals-cta p {
   font-size: 1.25rem;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* ===============================
