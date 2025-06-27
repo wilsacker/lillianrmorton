@@ -1391,10 +1391,6 @@ footer {
   margin-bottom: 2rem;
 }
 
-.counseling-approach h3 {
-  color: white;
-}
-
 .counseling-approach-cards {
   display: flex;
   flex-wrap: wrap;
@@ -1474,11 +1470,13 @@ footer {
    =============================== */
 
 /* Hero */
+.evals-hero-wrapper {
+  background-color: var(--color-bg-primary);
+}
+
 .evals-hero {
   text-align: center;
   padding: 5rem 1rem;
-  background-color: var(--color-bg-primary);
-  padding: 6rem;
 }
 
 .evals-hero h1 {
@@ -1492,14 +1490,16 @@ footer {
 }
 
 /* Clear Answers Section */
-.evals-answers {
+.evals-answers-wrapper {
   background-color: var(--color-bg-secondary);
+}
+
+.evals-answers {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem 1.5rem;
 }
 
 .evals-answers h2 {
@@ -1511,14 +1511,17 @@ padding-bottom: 1.5rem;
 }
 
 .evals-answers .image {
-  flex: 1 1 300px;
-  max-width: 450px;
+  flex: 0 0 auto;
+  width: 600px;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
 }
 
 .evals-answers .image img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .evals-answers .text {
@@ -1531,10 +1534,12 @@ padding-bottom: 1.5rem;
 }
 
 /* What Is an Evaluation */
-.evals-what {
+.evals-what-wrapper {
   background-color: var(--color-bg-primary);
+}
+
+.evals-what {
   margin: 0 auto;
-  padding: 4rem;
 }
 
 .evals-what h2 {
@@ -1563,11 +1568,15 @@ padding-bottom: 1.5rem;
 }
 
 /* Who Needs an Evaluation */
+.evals-who-wrapper {
+  background-color: var(--color-bg-tertiary);
+}
+
 .evals-who {
-  background-color: var(--color-bg-secondary);
-  padding: 2rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .evals-who h2 {
@@ -1584,42 +1593,28 @@ padding-bottom: 1.5rem;
 
 .evals-groups {
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  .evals-who {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .evals-groups {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
 }
 
 .group {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 600px;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 0 10px;
 }
 
 .group::before {
   content: "᯽"; /* https://emojicombos.com/leaf */
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  margin-top: 0.2rem;
+  font-size: 24px;
+  margin-bottom: 10px;
   color: var(--color-button-secondary);
 }
 
 .group h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
   margin: 0;
   display: inline;
 }
@@ -1631,10 +1626,12 @@ padding-bottom: 1.5rem;
 }
 
 /* Common Areas of Assessment */
-.evals-areas {
+.evals-areas-wrapper {
   background-color: var(--color-bg-primary);
+}
+
+.evals-areas {
   text-align: center;
-  padding: 4rem
 }
 
 .areas-grid {
@@ -1646,7 +1643,7 @@ padding-bottom: 1.5rem;
 }
 
 .area {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-quinary);
   color: white;
   padding: 1.5rem;
   border-radius: 12px;
@@ -1661,10 +1658,12 @@ padding-bottom: 1.5rem;
 }
 
 /* What to Expect */
-.evals-expect {
+.evals-expect-wrapper {
   background-color: var(--color-bg-secondary);
+}
+
+.evals-expect {
   text-align: center;
-  padding: 4rem;
 }
 
 .steps {
@@ -1686,10 +1685,12 @@ padding-bottom: 1.5rem;
 }
 
 /* Final CTA */
-.evals-cta {
+.evals-cta-wrapper {
   background-color: var(--color-bg-primary);
+}
+
+.evals-cta {
   text-align: center;
-  padding: 4rem;
 }
 
 .evals-cta h2 {
