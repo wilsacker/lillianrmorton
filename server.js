@@ -16,7 +16,9 @@ app.engine('hbs', exphbs.engine({
 app.set('view engine', 'hbs');
 
 // Serve static files (CSS, JS, images)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+    maxAge: '30d' // Cache static files for 30 days
+  }));
 
 // Load JSON data
 const services = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/services.json'), 'utf8'));
