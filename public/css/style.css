@@ -24,8 +24,7 @@
   --color-bg-quaternary: #e3edf0;
   --color-bg-quinary: #3e4e50;
   --color-bg-dark: #2b2e2f;
-  --color-accent-hover-blue:rgb(30, 56, 62);
-
+  --color-accent-hover-blue: rgb(30, 56, 62);
 
   /* Button Colors */
   --color-button-primary: #f4b88a;
@@ -102,7 +101,6 @@ section p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
 
 /* Uniform Button Class */
 .button {
@@ -243,60 +241,6 @@ header {
   margin-left: auto;
   z-index: 2;
   min-width: 180px; /* Adjust as needed to match button width */
-}
-
-/* ===============================
-    Media Queries (Mobile): Nav+ Burger Menu
-   =============================== */
-@media (max-width: 768px) {
-  .burger-menu {
-    display: block;
-    cursor: pointer;
-  }
-
-  .burger-menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    background-color: #333;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-appointment-button {
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    background-color: var(--color-header);
-    padding: 2rem 0;
-    z-index: 99;
-    align-items: center;
-  }
-
-  .nav-menu.active > ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-menu.active li a {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  header {
-    flex-direction: row;
-  }
 }
 
 /* ===============================
@@ -975,7 +919,6 @@ footer {
 .consultation-hero {
   background-color: var(--color-bg-primary);
   text-align: center;
-  
 }
 
 .consultation-hero.wrapper {
@@ -1504,7 +1447,7 @@ footer {
 }
 
 .evals-answers h2 {
-padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .evals-answers p {
@@ -1551,7 +1494,7 @@ padding-bottom: 1.5rem;
   padding-bottom: 1rem;
 }
 
-.evals-what p #paragraph{
+.evals-what p #paragraph {
   padding: 1rem;
 }
 
@@ -1676,7 +1619,7 @@ padding-bottom: 1.5rem;
 }
 
 .steps h3 {
- color: white
+  color: white;
 }
 
 /* Final CTA */
@@ -1731,5 +1674,113 @@ padding-bottom: 1.5rem;
 }
 
 /* ===============================
-    Responsive & Utility Classes
+    Mobile & Responsive Styling
    =============================== */
+
+/* Below laptop width – add padding to wrapper */
+@media (max-width: 1540px) {
+  .wrapper {
+    padding: 0 2rem;
+  }
+}
+
+/* Tablet landscape (e.g. iPad Pro horizontal) */
+@media (max-width: 1100px) {
+   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+    transform: scale(1.4);
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+  }
+
+  .nav-menu {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-appointment-button {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color-header);
+    padding: 2rem 0;
+    z-index: 99;
+    align-items: center;
+  }
+
+  .nav-menu.active > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-menu.active li a {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+/* Specific media target for breakpoints */
+@media (max-width: 1080px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text h1,
+  .hero-text p,
+  .hero-text .button {
+    text-align: center;
+  }
+
+  .hero-text .button {
+    margin-bottom: 2rem; /* Adds spacing below button */
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Tablet portrait / large phones */
+@media (max-width: 768px) {
+  .nav-cta {
+    display: none;
+  }
+}
+
+/* Phones (standard) */
+@media (max-width: 575px) {
+  /* Add phone styles here later */
+}
+
+/* Smallest devices (very narrow phones) */
+@media (max-width: 420px) {
+  /* Add tightest breakpoint tweaks here */
+}
