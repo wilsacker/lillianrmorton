@@ -414,8 +414,9 @@ footer {
 
 .question-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .question-cards .card {
@@ -587,6 +588,8 @@ footer {
 
 .bio-image img {
   max-width: 400px;
+  min-width: 260px;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 9px;
@@ -1613,7 +1616,7 @@ footer {
 .steps {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1681,6 +1684,38 @@ footer {
 @media (max-width: 1540px) {
   .wrapper {
     padding: 0 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .answers {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .answers-image {
+    max-width: 100%;
+    min-width: 300px;
+  }
+
+  .answers-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 500px;
+  }
+
+  .answers-text {
+    max-width: 700px;
+  }
+
+  .answers-text ul {
+    padding-left: 0;
+  }
+
+  .answers-text ul li {
+    justify-content: center;
   }
 }
 
@@ -1773,6 +1808,28 @@ footer {
   .nav-cta {
     display: none;
   }
+  .logo-img {
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  li {
+    font-size: 0.95rem;
+  }
+  .button {
+    font-size: 0.95rem;
+  }
 }
 
 /* Phones (standard) */
@@ -1783,4 +1840,14 @@ footer {
 /* Smallest devices (very narrow phones) */
 @media (max-width: 420px) {
   /* Add tightest breakpoint tweaks here */
+}
+@media (max-width: 1040px) {
+  .lillian-section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bio-image {
+    justify-content: center;
+  }
 }
