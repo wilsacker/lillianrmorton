@@ -274,10 +274,10 @@ footer {
   gap: 0.5rem;
   list-style: none;
   padding: 0;
-  margin: 0;
-  flex-direction: line;
+  margin: 0 auto;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .footer-nav-menu li {
@@ -1349,11 +1349,22 @@ footer {
 
 .counseling-approach-cards .card {
   background: var(--color-bg-quinary);
-  color: white;
+  color: var(--color-text-light);
   padding: 2rem;
   border-radius: 20px;
   max-width: 300px;
   flex: 1;
+}
+
+.counseling-approach-cards .card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-light);
+  min-height: 3.5rem; /* Ensures equal vertical space */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
 }
 
 /* === Counseling Benefits === */
@@ -1819,6 +1830,7 @@ footer {
   .footer-nav-menu ul {
     flex-direction: column;
     transform: translateY(5%);
+    justify-content: flex-start;
   }
 
   .footer-dropdown-content {
