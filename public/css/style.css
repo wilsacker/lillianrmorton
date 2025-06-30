@@ -224,7 +224,8 @@ header {
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  transition: background 0.2s;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 /* Hover effect for dropdown links */
@@ -232,8 +233,7 @@ header {
   background: var(--color-soft-gray);
   color: var(--color-text-dark);
   border-radius: 8px;
-  padding: 0.5rem 1.5rem;
-  transition: ease 0.2s;
+  padding: 0.65rem 1.5rem;
 }
 
 /* Request appointment area */
@@ -297,10 +297,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding-left: 1rem; /* adjust as needed for better centering */
 }
 
-/* Dropdown fix for footer */
 .footer-dropdown {
   position: relative;
 }
@@ -329,14 +327,14 @@ footer {
   border-radius: 8px;
   color: var(--color-text-dark);
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 
-.footer-dropdown-content a:hover {
+.footer-dropdown-content li a:hover {
   background: var(--color-soft-gray);
   color: var(--color-text-dark);
   border-radius: 8px;
-  padding: 0.5rem 1.5rem;
-  transition: ease 0.2s;
+  padding: 0.65rem 1.5rem;
 }
 
 /* ===============================
@@ -1731,7 +1729,7 @@ footer {
   .burger-menu {
     display: block;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 1rem;
     transform: scale(1.4);
   }
 
@@ -1739,7 +1737,7 @@ footer {
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px;
+    margin: 5px auto;
     background-color: #333;
   }
 
@@ -1757,12 +1755,12 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100vw;
     background-color: var(--color-header);
     padding: 2rem 0;
     z-index: 99;
     align-items: center;
+    margin: 0 auto;
   }
 
   .nav-menu.active > ul {
@@ -1801,6 +1799,22 @@ footer {
     height: auto;
     object-fit: contain;
   }
+
+  .footer-nav-menu ul {
+    flex-direction: column;
+    transform: translateY(5%);
+  }
+
+  .footer-dropdown-content {
+    right: 0;
+    left: auto;
+    transform: translateX(-10%);
+  }
+
+
+  .footer-cta {
+    display: none;
+  }
 }
 
 /* Tablet portrait / large phones */
@@ -1813,7 +1827,7 @@ footer {
   }
 
   h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   h2 {
     font-size: 1.5rem;
