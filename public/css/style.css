@@ -1788,9 +1788,13 @@ footer {
   .hero-text .button {
     text-align: center;
   }
+  
+  .hero-text {
+    flex: none;
+  }
 
   .hero-text .button {
-    margin-bottom: 2rem; /* Adds spacing below button */
+    margin-bottom: 2rem;
   }
 
   .hero-image img {
