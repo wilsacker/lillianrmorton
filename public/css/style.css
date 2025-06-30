@@ -524,7 +524,7 @@ footer {
 }
 
 .answers-text a:hover {
-  background-color: #444;
+  background-color: var(--color-button-secondary);
 }
 
 /* Meet Lillian Section */
@@ -663,8 +663,11 @@ footer {
 }
 
 /* Services Grid Section */
-.services-grid {
+.services-grid-wrapper {
   background-color: var(--color-bg-secondary);
+}
+
+.services-grid {
   text-align: center;
 }
 
@@ -677,16 +680,17 @@ footer {
 }
 
 .service-buttons {
-  /* container for links */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .service-buttons a {
-  /* button link */
+  width: 100%;
   background-color: var(--color-bg-quinary);
   color: var(--color-text-light);
   border-radius: 24px;
@@ -1215,14 +1219,18 @@ footer {
 /* === Counseling Hero === */
 .counseling-hero-wrapper {
   background-color: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .counseling-hero {
   text-align: center;
-}
-
-.counseling-hero h1 {
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .counseling-hero p {
@@ -1773,6 +1781,10 @@ footer {
     font-size: 1.25rem;
     font-weight: 600;
   }
+
+  .dropdown-btn {
+    padding-left: 1rem;
+  }
 }
 
 /* Specific media target for breakpoints */
@@ -1821,6 +1833,18 @@ footer {
   }
 }
 
+@media (max-width: 1040px) {
+  .lillian-section {
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .bio-image {
+    justify-content: center;
+  }
+}
+
 /* Tablet portrait / large phones */
 @media (max-width: 768px) {
   .nav-cta {
@@ -1848,6 +1872,10 @@ footer {
   .button {
     font-size: 0.95rem;
   }
+
+  .service-buttons {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Phones (standard) */
@@ -1855,17 +1883,6 @@ footer {
   /* Add phone styles here later */
 }
 
-/* Smallest devices (very narrow phones) */
 @media (max-width: 420px) {
   /* Add tightest breakpoint tweaks here */
-}
-@media (max-width: 1040px) {
-  .lillian-section {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .bio-image {
-    justify-content: center;
-  }
 }
