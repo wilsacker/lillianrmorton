@@ -99,7 +99,6 @@ section {
 section p {
   font-size: 1.125rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
 
 /* Uniform Button Class */
@@ -259,13 +258,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* changed from wrap to nowrap */
   gap: 2rem;
 }
 
 .footer-section img {
-  min-width: 250px;
+  min-width: 0;
+  width: 100%;
+  max-width: 200px;
   height: auto;
+  flex-shrink: 1;
 }
 
 /* Footer Navigation */
@@ -944,12 +946,11 @@ footer {
 }
 
 /* Questions Section */
-.consultation-questions {
+.consultation-questions-wrapper {
   background-color: var(--color-bg-secondary);
-  padding: 4rem 0;
 }
 
-.consultation-questions .wrapper {
+.consultation-questions {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -957,17 +958,16 @@ footer {
   align-items: flex-start;
 }
 
-.consultation-questions .text {
+.consultation-questions-text {
   flex: 1 1 500px;
 }
 
-.consultation-questions .text h2 {
+.consultation-questions-text h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-.consultation-questions .text p {
+.consultation-questions-text p {
   font-size: 1rem;
   color: var(--color-muted);
   line-height: 1.6;
@@ -1004,7 +1004,7 @@ footer {
 
 .consultation-questions .image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   border: none;
   background: none;
   padding: 0;
@@ -1076,20 +1076,25 @@ footer {
 .consultation-benefits {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* center vertically */
   flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 1.5rem;
   text-align: left;
 }
 
 .consultation-benefits .image {
   flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .consultation-benefits .image img {
   width: 100%;
   max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  object-position: left; /* crop right side */
 }
 
 .consultation-benefits .benefits-list {
@@ -1254,41 +1259,33 @@ footer {
   align-items: center;
 }
 
-.counseling-questions .questions-list {
-  flex: 1 1 55%;
-  min-width: 250px;
-  align-self: center;
-}
-
-.counseling-questions .text {
+.counseling-questions-list {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 2rem 0;
   align-items: center;
   width: 100%;
 }
 
-.counseling-questions .text h2 {
+.counseling-questions-list h2 {
   font-size: 1.8rem;
   color: #142526;
   margin-bottom: 1rem;
 }
 
-.counseling-questions .text p {
+.counseling-questions-list p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #142526;
   margin-bottom: 1.25rem;
 }
 
-.counseling-questions .text ul {
+.counseling-questions-list ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 2rem;
 }
 
-.counseling-questions .text ul li {
+.counseling-questions-list ul li {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -1297,7 +1294,7 @@ footer {
   text-align: left;
 }
 
-.counseling-questions .text ul li::before {
+.counseling-questions-list ul li::before {
   content: "᯽"; /* https://emojicombos.com/leaf */
   display: inline-block;
   width: 20px;
@@ -1307,10 +1304,16 @@ footer {
   color: var(--color-button-secondary);
 }
 
+.counseling-questions .questions-list {
+  flex: 1 1 55%;
+  min-width: 250px;
+  align-self: center;
+}
+
 .counseling-questions .image {
   flex: 1 1 40%;
   max-width: 500px;
-  min-width: 400px;
+  min-width: 250px;
   align-self: center;
   margin: 0 auto;
 }
@@ -1442,10 +1445,6 @@ footer {
   padding: 40px 0; /* optional: adjust as needed */
 }
 
-.evals-hero h1 {
-  font-weight: 700;
-}
-
 .evals-hero p {
   font-size: 1.4rem;
   font-weight: 300;
@@ -1552,12 +1551,12 @@ footer {
 
 .evals-who > p {
   font-size: 1.25rem;
-  max-width: 00px;
 }
 
 .evals-groups {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center; /* centers items when wrapping */
   width: 100%;
   max-width: 1200px;
   margin-top: 40px;
@@ -1568,7 +1567,8 @@ footer {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  padding: 0 10px;
+  padding: 10px 10px;
+  min-width: 200px;
 }
 
 .group::before {
@@ -1603,10 +1603,10 @@ footer {
   gap: 1.5rem;
   margin: 2rem auto;
   max-width: 850px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.area {
+.evals-area-card {
   background-color: var(--color-bg-quinary);
   color: white;
   padding: 1.5rem;
@@ -1614,7 +1614,7 @@ footer {
   font-weight: 600;
 }
 
-.area small {
+.evals-area-card small {
   font-weight: 400;
   font-size: 0.9rem;
   display: block;
@@ -1868,33 +1868,67 @@ footer {
 
   h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   h2 {
     font-size: 1.5rem;
+    margin-bottom: 0;
   }
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
   p {
-    font-size: 0.95rem;
+    font-size: 1rem !important;
+    margin-bottom: 0;
   }
   li {
-    font-size: 0.95rem;
+    font-size: 0.90rem !important;
+    padding: 10px 0;
   }
   .button {
-    font-size: 0.95rem;
+    font-size: 0.90rem !important;
+  }
+
+  .counseling-questions .text {
+    margin: 0rem;
   }
 
   .service-buttons {
     grid-template-columns: 1fr;
   }
+
+  .evals-cta h2 {
+    padding-bottom: 2rem;
+  }
+
+  .consultation-questions-text h2 {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Phones (standard) */
 @media (max-width: 575px) {
-  /* Add phone styles here later */
+  .footer-section img {
+    max-width: 140px;
+  }
+
+  .footer-nav-menu ul {
+    gap: 0.25rem;
+  }
+
+  .footer-cta .button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .consultation-questions {
+    gap: 0rem;
+  }
 }
 
 @media (max-width: 420px) {
   /* Add tightest breakpoint tweaks here */
+  .evals-hero h1 {
+    font-size: 1.8rem !important;
+  }
 }
