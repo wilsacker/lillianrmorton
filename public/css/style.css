@@ -253,7 +253,6 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -280,6 +279,7 @@ footer {
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin-right: 1rem;
 }
 
 .footer-nav-menu li {
@@ -756,11 +756,9 @@ footer {
 /* About Intro Section */
 .about-intro-wrapper {
   background-color: var(--color-bg-primary);
-  padding: 4rem 1rem;
 }
 
 .about-intro {
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -777,25 +775,27 @@ footer {
 
 .about-top {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  gap: 2rem;
 }
 
 .about-image {
-  flex: 1 1 150px;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 400px;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 600px;
   height: auto;
   object-fit: cover;
+  display: block;
 }
 
 .about-text {
   flex: 1 1 500px;
+  min-width: 250px;
 }
 
 /* Message Block Section */
@@ -866,7 +866,6 @@ footer {
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-align: left;
 }
 
 .approach-cards .card p {
@@ -889,6 +888,9 @@ footer {
 
 .areas-serviced {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .areas-serviced h2 {
@@ -906,12 +908,18 @@ footer {
 
 .county-columns {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .county-column {
   text-align: left;
+  flex: 1 1 200px;
+  min-width: 160px;
+  max-width: 250px;
 }
 
 .county-column ul {
@@ -1363,7 +1371,7 @@ footer {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: var(--color-text-light);
-  min-height: 3.5rem; /* Ensures equal vertical space */
+  min-height: 3.5rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1838,7 +1846,6 @@ footer {
     left: auto;
     transform: translateX(-10%);
   }
-
 
   .footer-cta {
     display: none;
