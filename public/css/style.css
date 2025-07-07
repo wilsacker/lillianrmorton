@@ -257,16 +257,15 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; /* changed from wrap to nowrap */
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .footer-section img {
-  min-width: 0;
-  width: 100%;
-  max-width: 275px;
+  max-width: 100%;
   height: auto;
-  flex-shrink: 1;
+  flex: 1 1 200px;
+  min-width: 250px;
 }
 
 /* Footer Navigation */
@@ -279,7 +278,7 @@ footer {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin-right: 3.5rem;
+  margin-right: 50px;
 }
 
 .footer-nav-menu li {
@@ -309,7 +308,7 @@ footer {
   display: none !important;
   position: absolute;
   bottom: 100%; /* Drops upward */
-  left: -2.5rem;
+  left: -3.2rem;
   background-color: white;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
@@ -1856,14 +1855,18 @@ footer {
 
   .footer-nav-menu ul {
     flex-direction: column;
-    transform: translateY(5%);
     justify-content: flex-start;
+    margin-right: 0rem;
+    gap: 1rem;
+  }
+
+  .footer-dropdown {
+    transform: translateX(10%);
   }
 
   .footer-dropdown-content {
     right: 0;
     left: auto;
-    transform: translateX(-10%);
   }
 
   .footer-cta {
@@ -1974,6 +1977,10 @@ footer {
   .county-columns {
     transform: translateX(10px);
   }
+
+  .footer-nav-menu li {
+    padding: 0px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1981,12 +1988,17 @@ footer {
 
 /* Phones (standard) */
 @media (max-width: 575px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .footer-section img {
     max-width: 140px;
   }
-
-  .footer-nav-menu ul {
-    gap: 0.25rem;
+  .footer-nav-menu {
+    margin-top: 1rem;
   }
 
   .footer-cta .button {
