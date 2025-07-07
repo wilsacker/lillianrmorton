@@ -141,8 +141,8 @@ header {
   display: flex;
   align-items: center;
   background-color: var(--color-header);
-  padding: 1.25rem 2rem;
-  height: 110px;
+  padding: 1.25em 2rem;
+  height: 140px;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -1988,6 +1988,17 @@ footer {
 
 /* Phones (standard) */
 @media (max-width: 575px) {
+  header {
+    height: 110px;
+  }
+  .logo-img {
+    height: 55px;
+    width: auto;
+  }
+
+  .burger-menu {
+    transform: scale(1);
+  }
   .footer-container {
     flex-direction: column-reverse;
     align-items: center;
