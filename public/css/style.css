@@ -473,10 +473,12 @@ footer {
 }
 
 .answers-image img {
-  width: 100%;
+  width: 105%;
   max-width: none;
   height: auto;
   object-fit: cover;
+  clip-path: inset(0 0 0 16.2%);
+  transform: translateX(-6.5%);
 }
 
 .answers-text {
@@ -669,12 +671,7 @@ footer {
   background-color: var(--color-bg-secondary);
 }
 
-.services-grid {
-  text-align: center;
-}
-
 .services-grid h2 {
-  /* heading */
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-text-dark);
@@ -683,11 +680,10 @@ footer {
 
 .service-buttons {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
   box-sizing: border-box;
 }
 
@@ -879,50 +875,6 @@ footer {
   color: var(--color-text);
   margin: 2rem auto;
   line-height: 1.6;
-}
-
-.areas-serviced-wrapper {
-  background-color: var(--color-bg-tertiary);
-}
-
-.areas-serviced {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.areas-serviced h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--color-text-dark);
-}
-
-.areas-serviced .note {
-  font-size: 1rem;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
-}
-
-.county-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.county-column {
-  text-align: left;
-  flex: 1 1 200px;
-  min-width: 160px;
-  max-width: 250px;
-}
-
-.county-column ul {
-  padding-left: 1.5rem;
 }
 
 /* ===============================
@@ -1230,6 +1182,65 @@ footer {
   margin-bottom: 1rem;
 }
 
+.areas-serviced-wrapper {
+  background-color: var(--color-bg-primary);
+}
+
+.areas-serviced {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.areas-serviced h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+}
+
+.areas-serviced h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.areas-serviced .note {
+  font-size: 1rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.county-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+  transform: translateX(30px);
+}
+
+.county-column {
+  text-align: left;
+  flex: 1 1 200px;
+  min-width: 160px;
+  max-width: 250px;
+}
+
+.county-column ul {
+  padding-left: 1.5rem;
+}
+
+.county-column li {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-text-dark);
+}
+
 /* ===============================
     Pages: Counseling
    =============================== */
@@ -1268,6 +1279,10 @@ footer {
   justify-content: space-between;
   gap: 2rem;
   flex-direction: column;
+}
+
+.counseling-questions h2{
+  margin-bottom: 0rem;
 }
 
 .counseling-questions-list {
@@ -1392,19 +1407,12 @@ footer {
   text-align: center;
 }
 
-/* Benefits grid now uses flexbox for layout and wrapping */
 .benefits-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
-
-/* Centering the last item if it's alone on its row is handled by flexbox justify-content */
-
-/* .benefit:nth-child(4) {
-  grid-column: 2;
-} */
 
 .benefit {
   background: none;
@@ -1524,7 +1532,7 @@ footer {
 
 .evals-what ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 1rem;
   padding-bottom: 1.5rem;
 }
 
@@ -1541,10 +1549,13 @@ footer {
 }
 
 .evals-who {
-  text-align: center;
+  text-align: left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: center; /* vertical center */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .evals-who h2 {
@@ -1558,40 +1569,50 @@ footer {
   font-size: 1.25rem;
 }
 
+.evals-who-questions {
+  flex: 1 1 300px;
+}
+
 .evals-groups {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers items when wrapping */
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex: 2;
 }
 
 .group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  padding: 10px 10px;
-  min-width: 200px;
-}
-
-.group::before {
-  content: "᯽"; /* https://emojicombos.com/leaf */
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: var(--color-button-secondary);
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .group h3 {
+  min-width: 160px;
+}
+
+.group::before {
+  content: "᯽";
+  font-size: 24px;
+  color: var(--color-button-secondary);
+}
+
+.group h3,
+.group p {
+  display: block;
   margin: 0;
-  display: inline;
+  line-height: 1.4;
+}
+
+.group h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .group p {
   font-size: 1.1rem;
-  display: inline;
-  margin: 0;
+  min-width: 250px;
+  max-width: 600px;
 }
 
 /* Common Areas of Assessment */
@@ -1607,8 +1628,9 @@ footer {
   display: grid;
   gap: 1.5rem;
   margin: 2rem auto;
-  max-width: 850px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 2rem;
+  max-width: 1000px;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
 }
 
 .evals-area-card {
@@ -1889,6 +1911,22 @@ footer {
     font-size: 0.90rem !important;
     padding: 10px 0;
   }
+
+  .answers-text {
+    text-align: left;
+  }
+
+  .answers-text h2,
+  .answers-text p,
+  .answers-text ul,
+  .answers-text li {
+    text-align: left;
+  }
+
+  .answers-text .button {
+    text-align: center;
+  }
+
   .button {
     font-size: 0.90rem !important;
   }
@@ -1900,6 +1938,10 @@ footer {
   .service-buttons {
     grid-template-columns: 1fr;
   }
+  
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
 
   .evals-cta h2 {
     padding-bottom: 2rem;
@@ -1908,6 +1950,33 @@ footer {
   .consultation-questions-text h2 {
     margin-bottom: 1rem;
   }
+
+  .evals-who {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .evals-who-questions {
+    flex: unset;
+    max-width: unset;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .county-columns {
+    transform: translateX(10px);
+  }
+}
+
+@media (max-width: 600px) {
 }
 
 /* Phones (standard) */
@@ -1926,7 +1995,7 @@ footer {
   }
 
   .consultation-questions {
-    gap: 0rem;
+    gap: 2rem;
   }
 }
 
