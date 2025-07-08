@@ -2014,6 +2014,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .footer-section img {
+      max-width: 140px;
+      margin: 0rem auto 0rem;
+    }
 }
 
 /* Phones (standard) */
@@ -2039,10 +2043,12 @@ footer {
   }
 
   .footer-section img {
-    max-width: 140px;
-    bottom: 0px;
+    max-width: 160px;
+    display: block;
+    margin: 0rem auto 0;
+    transform: translateX(-6px);
   }
-  
+
   .footer-nav-menu {
     margin-top: 1rem;
   }
