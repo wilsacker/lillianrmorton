@@ -2052,7 +2052,7 @@ footer {
   }
 
   .logo-img {
-    height: 55px;
+    height: 65px;
     width: auto;
   }
 
@@ -2071,7 +2071,7 @@ footer {
     max-width: 160px;
     display: block;
     margin: 0rem auto 0;
-    transform: translateX(-6px);
+    transform: translateX(-10px);
   }
 
   .footer-nav-menu {
