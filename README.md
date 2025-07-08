@@ -8,4 +8,4 @@ This project was developed by [Wils Acker](https://catalystwebdev.com) at Cataly
 It is licensed under a custom license which allows for forking and adaptation with permission.  
 Direct modifications to this repository are not allowed without express written consent.
 
-See the full [LICENSE](./LISCENCE) for details.
+See the full [LICENSE](./LISCENSE) for details.

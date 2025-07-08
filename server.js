@@ -1,3 +1,9 @@
+/*
+ * © 2025 William Acker (Catalyst Web Development)
+ * Licensed under the Custom Attribution and Forking Use Only License.
+ * See LICENSE file in the project root for details.
+ */
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const fs = require('fs');
