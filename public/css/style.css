@@ -2080,7 +2080,7 @@ footer {
     padding: 0;
     transform: none; /* Remove this */
     position: static; /* Reset */
-    transform: translateX(-0.5rem);
+    transform: translateX(-2.5rem);
   }
 
   .footer-nav-menu {
