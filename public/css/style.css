@@ -2069,8 +2069,10 @@ footer {
 
   .footer-section img {
     max-width: 160px;
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 0rem auto 0;
+    margin: 0 auto;
     transform: translateX(-10px);
   }
 
