@@ -276,7 +276,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .footer-section img {
@@ -2072,15 +2072,14 @@ footer {
   }
 
   .footer-section img {
+    width: auto;
     max-width: 160px;
-    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
-    transform: none; /* Remove this */
-    position: static; /* Reset */
-    transform: translateX(-2.5rem);
+    position: static;
   }
 
   .footer-nav-menu {
