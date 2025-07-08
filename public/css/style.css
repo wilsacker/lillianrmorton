@@ -2067,15 +2067,20 @@ footer {
     text-align: center;
   }
 
+  .footer-section {
+    text-align: center;
+  }
+
   .footer-section img {
     max-width: 160px;
-    bottom: 0px;
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    transform: translateX(-10px);
+    padding: 0;
+    transform: none; /* Remove this */
+    position: static; /* Reset */
+    transform: translateX(-0.5rem);
   }
 
   .footer-nav-menu {
