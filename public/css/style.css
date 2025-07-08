@@ -84,6 +84,12 @@ h2 {
   margin-bottom: 2rem;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 body {
   font-family: var(--font-secondary);
   color: var(--color-text-dark);
@@ -1941,15 +1947,16 @@ footer {
     padding: 10px 0;
   }
 
+  .answers {
+    gap: 1rem;
+  }
+
   .answers-text {
     text-align: left;
   }
 
-  .answers-text h2,
-  .answers-text p,
-  .answers-text ul,
-  .answers-text li {
-    text-align: left;
+  .answers-text h2 {
+    margin-bottom: 2rem;
   }
 
   .answers-text .button {
@@ -1958,6 +1965,18 @@ footer {
 
   .button {
     font-size: 0.9rem !important;
+  }
+
+  .questions h2 {
+    margin-bottom: 2rem;
+  }
+
+  .meet-lillian {
+    text-align: left;
+  }
+
+  .meet-lillian h2 {
+    margin-bottom: 1rem;
   }
 
   .counseling-questions .text {
@@ -2014,10 +2033,10 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .footer-section img {
-      max-width: 140px;
-      margin: 0rem auto 0rem;
-    }
+  .footer-section img {
+    max-width: 140px;
+    margin: 0rem auto 0rem;
+  }
 }
 
 /* Phones (standard) */
