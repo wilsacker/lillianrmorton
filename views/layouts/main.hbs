@@ -21,6 +21,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/Short-logo-LRM_V1.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/Short-logo-LRM_V1.png" sizes="16x16">
+
+    <!-- Form Script -->
+    <script src="https://app.hipaatizer.com/shared/hipaatizer-form-renderer.js"></script>
 </head>
 <body>
   <div id="loader" style="background-color: var(--color-bg-primary); color: transparent; height: 100vh; width: 100vw;"></div>
@@ -30,7 +33,7 @@
     <main>
         {{{body}}}
     </main>
-
+    {{> form}}
     {{> footer}}
   </div>
 

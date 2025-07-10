@@ -261,6 +261,23 @@ header {
 }
 
 /* ===============================
+    Partials: Form
+   =============================== */
+
+   .contact-form-section-wrapper {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .form-header {
+    text-align: center;
+  }
+
+  .form-header h2 {
+    margin-bottom: 0rem;
+  }
+
+
+/* ===============================
     Partials: Footer
    =============================== */
 
@@ -437,7 +454,6 @@ footer {
 }
 
 .questions h2 {
-  font-weight: 700;
   color: var(--color-text-dark);
 }
 
@@ -526,8 +542,6 @@ footer {
 
 .answers-text h2 {
   /* headline */
-  font-size: 2rem;
-  font-weight: 700;
   line-height: 1.3;
   margin-bottom: 1rem;
   color: var(--color-text-dark);
@@ -578,8 +592,6 @@ footer {
 }
 
 .meet-lillian h2 {
-  font-size: 2rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 0.5rem;
 }
@@ -645,8 +657,6 @@ footer {
 
 .three-steps h2 {
   /* section heading */
-  font-size: 1.875rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
 }
@@ -709,7 +719,6 @@ footer {
 }
 
 .services-grid h2 {
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
   text-align: center;
@@ -772,7 +781,6 @@ footer {
 }
 
 .closing-message h2 {
-  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -867,8 +875,6 @@ footer {
 }
 
 .unique-approach h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
 }
@@ -1699,7 +1705,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  margin-top: 3rem;
 }
 
 .steps h3 {

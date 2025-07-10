@@ -28,3 +28,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("hipaatizer-form-container");
+  if (container) {
+    const formInstance = new Hipaatizer(
+      "fbc63f6e-8054-45af-ad1d-7fedea6eb4eb",
+      false,
+      "",
+      false
+    );
+
+    formInstance.render = function () {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://app.hipaatizer.com/workflow/${this.workflowId}`;
+      iframe.style.width = "100%";
+      iframe.style.border = "0";
+      iframe.style.minHeight = "700px";
+      iframe.setAttribute("allow", "microphone; camera");
+
+      container.appendChild(iframe);
+    };
+
+    formInstance.render();
+  }
+});
