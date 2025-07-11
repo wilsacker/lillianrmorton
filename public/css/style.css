@@ -91,9 +91,13 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+header {
+  font-family: var(--font-primary);
 }
 
 body {
@@ -119,10 +123,15 @@ section p {
   line-height: 1.6;
 }
 
+footer, footer * {
+  font-family: var(--font-primary);
+}
+
 /* Uniform Button Class */
 .button {
   display: inline-block;
   padding: 0.85rem 2rem;
+  font-family: var(--font-secondary);
   background-color: var(--color-button-primary);
   color: var(--color-text-light);
   font-weight: 700;
@@ -146,8 +155,12 @@ section p {
 }
 
 .wrapper img {
-  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  display: block; /* ensures no inline gap */
 }
+
+/* uniform img styling */
 
 /* ===============================
     Partials: Header
@@ -183,6 +196,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   margin-left: 1rem;
+  padding-top: 20px;
 }
 
 .nav-menu > ul {
@@ -196,6 +210,7 @@ header {
 
 .nav-menu li a,
 .dropdown-btn {
+  font-style: var(--font-primary);
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--color-text-dark);
@@ -204,8 +219,10 @@ header {
 
 /* Dropdown menu (for "Services") */
 .dropdown-icon {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transform: translateY(-1px);
 }
 
 .dropdown {
@@ -257,8 +274,33 @@ header {
 .nav-cta {
   margin-left: auto;
   z-index: 2;
-  min-width: 180px; /* Adjust as needed to match button width */
+  min-width: 180px;
 }
+
+/* ===============================
+    Partials: Form
+   =============================== */
+
+   .contact-form-section-wrapper {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .form-header {
+    text-align: center;
+  }
+
+  .form-header h2 {
+    margin-bottom: 0rem;
+  }
+
+  #hipaatizer-form-container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 2rem auto;
+  }
 
 /* ===============================
     Partials: Footer
@@ -268,6 +310,7 @@ footer {
   background-color: var(--color-footer);
   color: var(--color-text-light);
   padding: 3rem 2rem;
+  font-family: var(--font-secondary);
 }
 
 .footer-container {
@@ -291,14 +334,14 @@ footer {
 /* Footer Navigation */
 .footer-nav-menu ul {
   display: flex;
-  gap: 0.7rem;
+  gap: 1.5rem;
   list-style: none;
   padding: 0;
   margin: 0 auto;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin-right: 75px;
+  margin-right: 55px;
 }
 
 .footer-nav-menu li {
@@ -311,6 +354,11 @@ footer {
   font-weight: 600;
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+.footer-dropdown-icon {
+  width: 25px;
+  height: 25px;
 }
 
 .footer-dropdown-trigger {
@@ -356,6 +404,10 @@ footer {
   color: var(--color-text-dark);
   border-radius: 8px;
   padding: 0.65rem 1.5rem;
+}
+
+.footer-cta {
+  font-family: var(--font-secondary);
 }
 
 .footer-credits {
@@ -406,7 +458,6 @@ footer {
 }
 
 .hero-text h1 {
-  font-weight: 700;
   line-height: 1.2;
   color: var(--color-text-dark);
   margin-bottom: 2rem;
@@ -437,7 +488,6 @@ footer {
 }
 
 .questions h2 {
-  font-weight: 700;
   color: var(--color-text-dark);
 }
 
@@ -510,12 +560,10 @@ footer {
 }
 
 .answers-image img {
-  width: 105%;
+  width: 90%;
   max-width: none;
   height: auto;
   object-fit: cover;
-  clip-path: inset(0 0 0 16.2%);
-  transform: translateX(-6.5%);
 }
 
 .answers-text {
@@ -526,8 +574,6 @@ footer {
 
 .answers-text h2 {
   /* headline */
-  font-size: 2rem;
-  font-weight: 700;
   line-height: 1.3;
   margin-bottom: 1rem;
   color: var(--color-text-dark);
@@ -578,8 +624,6 @@ footer {
 }
 
 .meet-lillian h2 {
-  font-size: 2rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 0.5rem;
 }
@@ -645,8 +689,6 @@ footer {
 
 .three-steps h2 {
   /* section heading */
-  font-size: 1.875rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
 }
@@ -684,16 +726,14 @@ footer {
 .step h3::before {
   content: attr(data-step);
   display: block;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 1rem;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto auto;
   background-color: var(--color-soft-gray);
   color: var(--color-text-dark);
-  font-weight: 700;
   border-radius: 50%;
-  line-height: 48px;
+  line-height: 68px;
   font-size: 1.25rem;
-  border: 2px solid #373737;
 }
 
 .step p {
@@ -709,7 +749,6 @@ footer {
 }
 
 .services-grid h2 {
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
   text-align: center;
@@ -772,7 +811,6 @@ footer {
 }
 
 .closing-message h2 {
-  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -796,8 +834,7 @@ footer {
 }
 
 .about-intro h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .about-intro p {
@@ -867,8 +904,6 @@ footer {
 }
 
 .unique-approach h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 3rem;
 }
@@ -928,10 +963,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.consultation-hero h1 {
-  font-weight: 700;
 }
 
 .consultation-hero p {
@@ -1156,9 +1187,7 @@ footer {
 }
 
 .contact-intro h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--color-text);
 }
 
@@ -1212,6 +1241,11 @@ footer {
   background-color: var(--color-bg-secondary);
 }
 
+.contact-info h2 {
+  color: var(--color-text-dark);
+  margin-bottom: 0rem;
+}
+
 .contact-info p {
   font-size: 1.125rem;
   color: var(--color-text);
@@ -1245,7 +1279,7 @@ footer {
 
 .areas-serviced .note {
   font-size: 1rem;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   line-height: 1.6;
 }
 
@@ -1699,7 +1733,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  margin-top: 3rem;
 }
 
 .steps h3 {
@@ -1943,6 +1976,9 @@ footer {
   }
   h3 {
     font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.1rem;
   }
   p {
     font-size: 1rem !important;
