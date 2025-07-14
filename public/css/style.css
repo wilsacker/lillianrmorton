@@ -81,7 +81,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -696,9 +696,7 @@ footer {
 }
 
 .three-steps h2 {
-  /* section heading */
-  color: var(--color-text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .steps {
@@ -758,7 +756,7 @@ footer {
 
 .services-grid h2 {
   color: var(--color-text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -913,7 +911,7 @@ footer {
 
 .unique-approach h2 {
   color: var(--color-text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .approach-cards {
@@ -990,16 +988,11 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .consultation-questions-text {
   flex: 1 1 500px;
-}
-
-.consultation-questions-text h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
 .consultation-questions-text p {
@@ -1060,12 +1053,6 @@ footer {
   margin: 0 auto;
 }
 
-.what-is-consultation h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
 .what-is-consultation p {
   font-size: 1rem;
   line-height: 1.6;
@@ -1098,12 +1085,6 @@ footer {
 .why-consultation {
   background-color: var(--color-bg-tertiary);
   text-align: center;
-}
-
-.why-consultation h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .why-consultation p {
@@ -1168,12 +1149,6 @@ footer {
   background-color: var(--color-bg-primary);
   padding: 4rem 0;
   text-align: center;
-}
-
-.consultation-cta h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .consultation-cta p {
@@ -1356,7 +1331,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-direction: column;
 }
 
@@ -1445,7 +1420,6 @@ footer {
 
 .counseling-approach h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .counseling-approach-cards {
@@ -1753,7 +1727,6 @@ footer {
 /* Final CTA */
 .evals-cta-wrapper {
   background-color: var(--color-bg-primary);
-  padding: 80px 0;
 }
 
 .evals-cta {
@@ -1767,6 +1740,7 @@ footer {
 
 .evals-cta h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .evals-cta p {
@@ -1896,9 +1870,8 @@ footer {
     gap: 1.5rem;
   }
 
-  .nav-menu.active li a {
-    font-size: 1.25rem;
-    font-weight: 600;
+  .mobile-only {
+    padding: 0px;
   }
 
   .dropdown-btn {
@@ -1978,6 +1951,12 @@ footer {
   }
 }
 
+@media (max-width: 900px) {
+  .evals-answers {
+    gap: 1rem;
+  }
+}
+
 /* Tablet portrait / large phones */
 @media (max-width: 768px) {
   .nav-cta {
@@ -2004,7 +1983,6 @@ footer {
   }
   h2 {
     font-size: 1.5rem;
-    margin-bottom: 0;
   }
   h3 {
     font-size: 1.3rem;
