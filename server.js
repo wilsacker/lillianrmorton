@@ -51,7 +51,7 @@ app.get('/counseling', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('pages/contact', { title: 'Contact' });
+    res.render('pages/contact', { title: 'Contact', hideFormPartial: true });
 });
 
 app.use((req, res) => {

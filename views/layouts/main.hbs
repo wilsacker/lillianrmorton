@@ -33,7 +33,9 @@
     <main>
         {{{body}}}
     </main>
-    {{> form}}
+    {{#unless hideFormPartial}}
+      {{> form}}
+    {{/unless}}
     {{> footer}}
   </div>
 

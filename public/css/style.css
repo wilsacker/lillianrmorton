@@ -1238,7 +1238,7 @@ footer {
 .contact-info {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
 }
 
 .contact-info h2 {
@@ -1254,7 +1254,7 @@ footer {
 }
 
 .areas-serviced-wrapper {
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-secondary);
 }
 
 .areas-serviced {
