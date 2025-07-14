@@ -2117,9 +2117,9 @@ footer {
     text-align: center;
   }
 
-  /* .footer-section img {
+  .footer-section img {
     width: auto;
-    max-width: 160px;
+    max-width: 200px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -2128,14 +2128,6 @@ footer {
     position: static;
     min-width: 0;       /* <-- Reset this */
     flex: none;         /* <-- Prevent image from flexing weirdly */
-  } */
-
-  .footer-section img {
-    flex: 1 1 140px;
-    min-width: 100px;       /* Reasonable lower bound */
-    max-width: 160px;       /* Prevents over-shrinking */
-    margin: 0 auto;
-    display: block;
   }
 
   .footer-nav-menu {
