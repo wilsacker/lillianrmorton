@@ -46,7 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.style.border = "0";
       iframe.style.minHeight = "700px";
       iframe.setAttribute("allow", "microphone; camera");
-
+      iframe.setAttribute("loading", "lazy");
+      iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+    
       container.appendChild(iframe);
     };
 
