@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.querySelector(".burger-menu");
   const navMenu = document.querySelector(".nav-menu");
   const navMenuLinks = document.querySelectorAll(".nav-menu li a");
-
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  
   if (loader) loader.style.display = "none";
   if (mainContent) mainContent.style.display = "";
 
@@ -20,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  document.addEventListener("click", function (event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnBurger = burgerMenu.contains(event.target);
+    const isClickOnDropdownBtn = dropdownBtn && dropdownBtn.contains(event.target);
+    if (!isClickInsideNav && !isClickOnBurger && !isClickOnDropdownBtn) {
+      navMenu.classList.remove("active");
+    }
+  });
+  
   if (navMenuLinks.length) {
     navMenuLinks.forEach((link) => {
       link.addEventListener("click", function () {
