@@ -2126,7 +2126,6 @@ footer {
     margin-right: auto;
     padding: 0;
     position: static;
-    min-width: 0;       /* <-- Reset this */
     flex: none;         /* <-- Prevent image from flexing weirdly */
   }
 
