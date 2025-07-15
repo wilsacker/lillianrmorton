@@ -5,6 +5,12 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  if ('ontouchstart' in document.documentElement) {
+    document.body.classList.add('touch-device');
+  } else {
+    document.body.classList.add('no-touch');
+  }
+
   const loader = document.getElementById("loader");
   const mainContent = document.getElementById("main-content");
   const burgerMenu = document.querySelector(".burger-menu");

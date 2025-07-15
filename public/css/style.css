@@ -224,6 +224,20 @@ header {
   gap: 0.35rem;
 }
 
+/* Consistent dropdown open styling for both desktop and mobile (tap/hover) */
+.dropdown.open .dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-65px);
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  z-index: 100;
+  min-width: 200px;
+}
+
 /* Ensure consistent dropdown-btn styling across all breakpoints */
 .dropdown-btn {
   background: none;
@@ -286,9 +300,37 @@ header {
   margin: 0;
 }
 
-.dropdown:hover .dropdown-content {
+
+/* Target desktop devices (non-touch) for hover dropdown */
+.no-touch .dropdown:hover .dropdown-content {
   display: block;
+  position: absolute;
+  transform: translateX(-65px);
+  top: 100%;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
   border-radius: 8px;
+  z-index: 100;
+  min-width: 200px;
+}
+
+/* Target touch devices (like Android) for click-to-open dropdown */
+.touch-device .dropdown .dropdown-content {
+  display: none;
+}
+
+.touch-device .dropdown.open .dropdown-content {
+  display: block;
+  position: absolute;
+  transform: translateX(-65px);
+  top: 100%;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  z-index: 100;
+  min-width: 200px;
 }
 
 /* Style dropdown links */
@@ -1927,16 +1969,6 @@ footer {
     padding-left: 1.25rem !important;
   }
 
-  .nav-menu.active > ul > .dropdown.open .dropdown-content {
-    display: block;
-    position: relative;
-    transform: none;
-    top: 0;
-    background: transparent;
-    box-shadow: none;
-    min-width: auto;
-    z-index: 1;
-  }
 }
 
 
