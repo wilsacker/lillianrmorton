@@ -82,6 +82,7 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #162325;
 }
 
 h3 {
@@ -1693,14 +1694,7 @@ footer {
 }
 
 .evals-who h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
   color: #162325;
-}
-
-.evals-who > p {
-  font-size: 1.25rem;
 }
 
 .evals-who-questions {
@@ -1726,8 +1720,9 @@ footer {
 }
 
 .group::before {
-  content: "᯽";
-  font-size: 24px;
+  content: "᯽"; /* https://emojicombos.com/leaf */
+  display: block;
+  margin: 0 auto 0.5rem;
   color: var(--color-button-secondary);
 }
 
@@ -2162,7 +2157,8 @@ footer {
 
   .evals-who {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .evals-who-questions {
@@ -2174,10 +2170,15 @@ footer {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
-
+  
+  .evals-who-questions {
+    text-align: center;
+  }
+  
   .group {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .county-columns {
