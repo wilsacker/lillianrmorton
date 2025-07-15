@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.querySelector(".nav-menu");
   const navMenuLinks = document.querySelectorAll(".nav-menu li a");
   const dropdownBtn = document.querySelector(".dropdown-btn");
+  const dropdownContent = document.querySelector(".dropdown-content");
   
   if (loader) loader.style.display = "none";
   if (mainContent) mainContent.style.display = "";
@@ -25,10 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const isClickInsideNav = navMenu.contains(event.target);
     const isClickOnBurger = burgerMenu.contains(event.target);
     const isClickOnDropdownBtn = dropdownBtn && dropdownBtn.contains(event.target);
-    if (!isClickInsideNav && !isClickOnBurger && !isClickOnDropdownBtn) {
+    const isClickOnDropdownContent = dropdownContent && dropdownContent.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnBurger && !isClickOnDropdownBtn && !isClickOnDropdownContent) {
       navMenu.classList.remove("active");
+      document.querySelector(".dropdown")?.classList.remove("open");
     }
   });
+
+  if (dropdownBtn) {
+    dropdownBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation(); // Prevents triggering the outer click listener
+      const dropdown = dropdownBtn.parentElement;
+      dropdown.classList.toggle("open");
+    });
+  }
   
   if (navMenuLinks.length) {
     navMenuLinks.forEach((link) => {
