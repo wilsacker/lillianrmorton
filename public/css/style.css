@@ -2226,13 +2226,15 @@ footer {
 
   .footer-section img {
     width: auto;
-    max-width: 160px;
+    max-width: 250px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     position: static;
+    min-width: 0;       /* <-- Reset this */
+    flex: none;         /* <-- Prevent image from flexing weirdly */
   }
 
   .footer-nav-menu {
