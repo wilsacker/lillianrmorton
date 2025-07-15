@@ -208,13 +208,46 @@ header {
   z-index: 200;
 }
 
-.nav-menu li a,
+.nav-menu li a {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Ensure consistent dropdown-btn styling across all breakpoints */
 .dropdown-btn {
+  background: none;
+  border: none;
+  font: inherit;
   font-style: var(--font-primary);
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--color-text-dark);
   text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-menu button {
+  all: unset;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .mobile-only {
@@ -222,6 +255,10 @@ header {
 }
 
 /* Dropdown menu (for "Services") */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
 .dropdown-icon {
   width: 20px;
   height: 20px;
@@ -1874,10 +1911,34 @@ footer {
     padding: 0px;
   }
 
+  /* Ensure .dropdown-btn matches nav link styling on mobile */
   .dropdown-btn {
-    padding-left: 1rem;
+    background: none;
+    border: none;
+    font: inherit;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-left: 1.25rem !important;
+  }
+
+  .nav-menu.active > ul > .dropdown.open .dropdown-content {
+    display: block;
+    position: relative;
+    transform: none;
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    min-width: auto;
+    z-index: 1;
   }
 }
+
 
 /* Specific media target for breakpoints */
 @media (max-width: 1080px) {

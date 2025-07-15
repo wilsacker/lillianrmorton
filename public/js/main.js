@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenuLinks = document.querySelectorAll(".nav-menu li a");
   const dropdownBtn = document.querySelector(".dropdown-btn");
   const dropdownContent = document.querySelector(".dropdown-content");
-  
+  const container = document.getElementById("hipaatizer-form-container");
+
   if (loader) loader.style.display = "none";
   if (mainContent) mainContent.style.display = "";
 
@@ -37,12 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (dropdownBtn) {
     dropdownBtn.addEventListener("click", function (event) {
       event.preventDefault();
-      event.stopPropagation(); // Prevents triggering the outer click listener
-      const dropdown = dropdownBtn.parentElement;
-      dropdown.classList.toggle("open");
+      event.stopPropagation();
+      const dropdown = dropdownBtn.closest(".dropdown");
+      if (dropdown) {
+        dropdown.classList.toggle("open");
+      }
     });
   }
-  
+
   if (navMenuLinks.length) {
     navMenuLinks.forEach((link) => {
       link.addEventListener("click", function () {
@@ -50,10 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("hipaatizer-form-container");
   if (container) {
     const formInstance = new Hipaatizer(
       "fbc63f6e-8054-45af-ad1d-7fedea6eb4eb",
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.setAttribute("loading", "lazy");
       iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
       iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
-    
+
       container.appendChild(iframe);
     };
 
