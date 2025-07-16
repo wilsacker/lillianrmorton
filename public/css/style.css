@@ -157,7 +157,7 @@ footer, footer * {
 
 .wrapper img {
   margin: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   display: block; /* ensures no inline gap */
 }
 
@@ -499,7 +499,7 @@ footer {
 
 .footer-credits {
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   color: var(--color-text-light); /* or a muted color of your palette */
   line-height: 1.4;
   position: relative;
@@ -762,7 +762,6 @@ footer {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 9px;
 }
 
 /* 3 Steps Section */
@@ -930,15 +929,17 @@ footer {
 
 .about-top {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .about-image {
   flex: 0 0 auto;
-  width: 100%;
   max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-image img {
@@ -949,7 +950,7 @@ footer {
 }
 
 .about-text {
-  flex: 1 1 500px;
+  flex: 1 1 0;
   min-width: 250px;
 }
 
@@ -2099,7 +2100,7 @@ footer {
     margin-bottom: 0;
   }
   li {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     padding: 10px 0;
   }
 
@@ -2190,7 +2191,25 @@ footer {
   }
 
   .footer-credits p {
-    font-size: 0.5rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .footer-credits strong {
+    font-size: 0.6rem !important;
+  }
+
+  .about-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .about-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 
