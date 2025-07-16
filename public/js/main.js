@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.src = `https://app.hipaatizer.com/workflow/${this.workflowId}`;
       iframe.style.width = "100%";
       iframe.style.border = "0";
-      iframe.style.minHeight = "700px";
+      iframe.style.minHeight = "720px";
       iframe.setAttribute("allow", "microphone; camera");
       iframe.setAttribute("loading", "lazy");
       iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
