@@ -2225,6 +2225,10 @@ footer {
     max-width: 140px;
     margin: 0rem auto 0rem;
   }
+
+  .counseling-questions-list {
+    gap: 0rem;
+  }
 }
 
 /* Phones (standard) */
