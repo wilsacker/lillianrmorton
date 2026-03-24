@@ -22,9 +22,16 @@ app.engine('hbs', exphbs.engine({
 app.set('view engine', 'hbs');
 
 // Serve static files (CSS, JS, images)
+const isProd = process.env.NODE_ENV === 'production';
+
 app.use(express.static(path.join(__dirname, 'public'), {
-    maxAge: '30d' // Cache static files for 30 days
-  }));
+  maxAge: isProd ? '30d' : 0,
+  setHeaders: (res) => {
+    if (!isProd) {
+      res.setHeader('Cache-Control', 'no-store');
+    }
+  }
+}));
 
 // Load JSON data
 const services = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/services.json'), 'utf8'));
@@ -54,6 +61,10 @@ app.get('/contact', (req, res) => {
     res.render('pages/contact', { title: 'Contact', hideFormPartial: true });
 });
 
+app.get('/__bootcheck', (req, res) => {
+    res.type('text').send(`BOOTCHECK FROM: ${__filename}\nDIR: ${__dirname}\nCWD: ${process.cwd()}\n`);
+  });
+  
 app.use((req, res) => {
     res.status(404).render('pages/404', { title: 'Page Not Found' });
 });
