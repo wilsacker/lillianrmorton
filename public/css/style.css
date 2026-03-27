@@ -501,7 +501,7 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   color: var(--color-text-light); /* or a muted color of your palette */
-  line-height: 1.4;
+  line-height: 1.3;
   position: relative;
   top: 35px;
 }
@@ -513,6 +513,10 @@ footer {
 
 .footer-credits a:hover {
   text-decoration: none;
+}
+
+.footer-credit-line {
+  margin-bottom: 0.2rem;
 }
 
 /* ===============================
